@@ -1,0 +1,31 @@
+{
+  "name": "monitoring-perpulangan",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "gh-pages": "^6.3.0",
+    "svelte": "^5.28.1",
+    "vite": "^6.3.5",
+    "vite-plugin-static-copy": "^3.0.0"
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "^5.2.8",
+    "@fontsource/montserrat-alternates": "^5.2.5",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/svelte-fontawesome": "^0.2.3",
+    "@tailwindcss/vite": "^4.1.6",
+    "lucide-svelte": "^0.545.0",
+    "tailwindcss": "^4.1.6"
+  }
+}

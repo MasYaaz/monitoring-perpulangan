@@ -1,4 +1,8 @@
-import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import {
   faCameraAlt,
   faCameraRetro,
@@ -8,6 +12,38 @@ import {
   faPhone,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  Bus,
+  Clock,
+  Home,
+  House,
+  MapPinned,
+  NotebookPen,
+  Users,
+} from "lucide-svelte";
+
+export const menuItems = [
+  {
+    id: "section_2",
+    icon: NotebookPen,
+    text: "Tata Tertib",
+  },
+  {
+    id: "section_3",
+    icon: MapPinned,
+    text: "Denah Al-Akbar",
+  },
+  {
+    id: "section_4",
+    icon: Bus,
+    text: "Jadwal Keberangkatan",
+  },
+  {
+    id: "section_5",
+    icon: Users,
+    text: "Data Santri",
+  },
+];
 
 export const mySkill = [
   {
@@ -50,16 +86,23 @@ export const profilItems = [
 ];
 
 export const navItems = [
-  { id: "section_1", label: "Home", aria: "Home"},
-  { id: "section_2", label: "About Me", aria: "About Me"},
-  { id: "section_3", label: "My Skills", aria: "About Me"},
-  { id: "section_4", label: "Certificate", aria: "About Me"},
-  { id: "section_5", label: "Portofolio", aria: "About Me"},
+  { id: "section_1", icon: House, aria: "Halaman Utama" },
+  { id: "section_2", icon: MapPinned, aria: "Denah" },
+  { id: "section_3", icon: NotebookPen, aria: "Tata Tertib" },
+  { id: "section_4", icon: Clock, aria: "Jadwal Kedatangan" },
+  { id: "section_5", icon: Users, aria: "Data Santri" },
 ];
 
 export const socialMedia = [
-  { href : "https://www.instagram.com/mas_yazz22/", aria: "Instagram", icon: faInstagram},
-  { href : "https://www.linkedin.com/in/aflah-mahdi-yazdi-a69414355/", aria: "Linkedin", icon:faLinkedin },
-  { href : "https://github.com/MasYaaz", aria: "Github", icon : faGithub },
-]
-
+  {
+    href: "https://www.instagram.com/mas_yazz22/",
+    aria: "Instagram",
+    icon: faInstagram,
+  },
+  {
+    href: "https://www.linkedin.com/in/aflah-mahdi-yazdi-a69414355/",
+    aria: "Linkedin",
+    icon: faLinkedin,
+  },
+  { href: "https://github.com/MasYaaz", aria: "Github", icon: faGithub },
+];

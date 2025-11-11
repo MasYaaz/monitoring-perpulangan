@@ -10,9 +10,8 @@
   import { scrollToSection } from "./lib/utils/scrollTo";
   import { handleScroll } from "./lib/utils/scrollHandler";
   import Navbar from "./lib/component/Navbar.svelte";
-  import { mySkill, profilItems } from "./lib/store/array";
+  import { menuItems, mySkill, navItems, profilItems } from "./lib/store/array";
   import Footer from "./lib/component/Footer.svelte";
-  import FixedNavbar from "./lib/component/FixedNavbar.svelte";
 
   // Observer
   let observer;
@@ -53,10 +52,9 @@
 
 <Navbar />
 <main>
-  <FixedNavbar />
-  <!-- Section 1 -->
+  <!-- Halaman Utama -->
   <section
-    class="relative w-full flex justify-center overflow-hidden min-h-screen xl:max-h-screen bg-cover bg-[url('./images/back.webp')]"
+    class="relative w-full flex justify-center min-h-screen xl:max-h-screen bg-cover bg-[url('./images/back.webp')]"
     id="section_1"
   >
     <div
@@ -64,69 +62,80 @@
     ></div>
 
     <div
-      class="flex lg:mx-20 pt-10 max-w-xl min-h-screen xl:h-screen xl:max-w-7xl justify-center items-end flex-col-reverse xl:flex-row"
+      class="flex flex-col justify-center items-center gap-6 min-h-screen px-6 lg:px-10 2xl:grid 2xl:grid-cols-6 2xl:max-w-7xl 2xl:mx-auto 2xl:gap-6"
     >
-      <!-- Gambar -->
+      <!-- Kolom 1: Gambar tunggal -->
       <div
         bind:this={refs["gambarRef"]}
-        class="transition-transform duration-700 ease-out basis-2/3 flex items-end aspect-[685/808]"
-        class:translate-y-50={!visibleFlags["gambarRef"]}
+        class="transition-transform ease-out duration-700 hidden 2xl:flex justify-center col-span-3"
+        class:translate-y-10={!visibleFlags["gambarRef"]}
         class:opacity-0={!visibleFlags["gambarRef"]}
-        class:translate-y-15={visibleFlags["gambarRef"]}
+        class:translate-y-0={visibleFlags["gambarRef"]}
         class:opacity-100={visibleFlags["gambarRef"]}
       >
         <img
-          src="./images/fullbody.webp"
+          src="./images/al-akbar.webp"
           loading="eager"
           fetchpriority="high"
-          alt="Foto"
+          alt="Foto depan"
           width="685"
           height="808"
-          class="w-full h-auto -translate-y-10 transition-transform duration-200 hover:scale-110"
+          class="w-auto h-[400px] md:h-[5000px] xl:h-[700px] object-cover aspect-square rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105"
         />
       </div>
 
-      <!-- Teks + Tombol -->
+      <!-- Kolom 2: Dua gambar bertumpuk -->
       <div
-        class="flex flex-col w-full lg:h-screen basis-1/3 justify-center items-center text-center gap-5"
+        bind:this={refs["gambarRef"]}
+        class="transition-transform ease-out duration-700 flex justify-center items-center col-span-2"
+        class:translate-y-10={!visibleFlags["gambarRef"]}
+        class:opacity-0={!visibleFlags["gambarRef"]}
+        class:translate-y-0={visibleFlags["gambarRef"]}
+        class:opacity-100={visibleFlags["gambarRef"]}
       >
-        <h1
-          bind:this={refs["textRef"]}
-          class="font-primary text-primary dark:text-secondary text-5xl xl:text-8xl uppercase font-bold transition-transform duration-700 ease-out transform"
-          class:-translate-y-10={!visibleFlags["textRef"]}
-          class:opacity-0={!visibleFlags["textRef"]}
-          class:translate-y-15={visibleFlags["textRef"]}
-          class:opacity-100={visibleFlags["textRef"]}
-        >
-          Welcome
-        </h1>
-        <p
-          bind:this={refs["textRef"]}
-          class="font-primary dark:text-secondary font-medium text-xl xl:text-4xl uppercase tracking-[1.5px] transition-transform duration-700 ease-out transform"
-          class:-translate-y-10={!visibleFlags["textRef"]}
-          class:opacity-0={!visibleFlags["textRef"]}
-          class:translate-y-10={visibleFlags["textRef"]}
-          class:opacity-100={visibleFlags["textRef"]}
-        >
-          to my web
-        </p>
-        <button
-          onclick={() => scrollToSection("section_2")}
-          aria-label="Next Button"
-          bind:this={refs["textRef"]}
-          class="font-primary dark:bg-brown dark:hover:bg-secondary dark:hover:text-primary hover:cursor-pointer hover:scale-105 xl:mt-6 bg-primary hover:bg-brown text-secondary hover:text-light rounded-xl text-lg lg:text-2xl py-2 px-5 uppercase shadow transition-transform duration-300 ease-out"
-          class:-translate-y-10={!visibleFlags["textRef"]}
-          class:opacity-0={!visibleFlags["textRef"]}
-          class:translate-y-10={visibleFlags["textRef"]}
-          class:opacity-100={visibleFlags["textRef"]}
-        >
-          About Me
-        </button>
+        <div class="grid gap-5 h-[400px] md:h-[500px] xl:h-[700px]">
+          <img
+            src="./images/al-akbar.webp"
+            loading="eager"
+            fetchpriority="high"
+            alt="Foto depan"
+            class="w-auto h-full object-cover rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105"
+          />
+          <img
+            src="./images/al-akbar.webp"
+            loading="eager"
+            fetchpriority="high"
+            alt="Foto depan"
+            class="w-auto h-full object-cover rounded-2xl shadow-xl hidden 2xl:flex transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+      </div>
+
+      <!-- Kolom 3: Bagian teks -->
+      <div
+        bind:this={refs["textRef"]}
+        class="flex flex-row 2xl:flex-col items-left justify-center text-center gap-1 lg:gap-5 h-full xl:h-[700px] transition-transform ease-out duration-700 grid-cols-2 2xl:grid-cols-4"
+        class:translate-y-10={!visibleFlags["textRef"]}
+        class:opacity-0={!visibleFlags["textRef"]}
+        class:translate-y-0={visibleFlags["textRef"]}
+        class:opacity-100={visibleFlags["textRef"]}
+      >
+        {#each menuItems as m}
+          <button
+            onclick={() => scrollToSection(m.id)}
+            class="flex aspect-square w-20 h-20 lg:h-40 flex-col items-center p-2 lg:w-40 justify-center gap-1 rounded-3xl bg-green-300 uppercase shadow-lg transition-transform duration-200 hover:scale-105"
+          >
+            <svelte:component this={m.icon} class="h-6 w-6 2xl:w-12 2xl:h-12" />
+            <p class="mt-1 font-bold w-full text-[6px] 2xl:text-base">
+              {m.text}
+            </p>
+          </button>
+        {/each}
       </div>
     </div>
   </section>
 
-  <!-- Section 2 -->
+  <!-- Denah Al-Akbar -->
   <section
     class="w-full min-h-screen bg-secondary dark:bg-primary px-6 md:px-10 lg:px-24 xl:px-32 py-16 md:py-20 lg:py-24 flex flex-col xl:flex-row items-center justify-center gap-10 md:gap-16"
     id="section_2"
@@ -199,7 +208,7 @@
     </div>
   </section>
 
-  <!-- Section 3 -->
+  <!-- Tata Tertib -->
   <section
     class="w-full min-h-screen bg-secondary dark:bg-primary px-6 md:px-16 lg:px-32 py-16 flex flex-col items-center justify-center gap-8 md:pt-30"
     id="section_3"
@@ -269,7 +278,7 @@
     </div>
   </section>
 
-  <!-- Section 4 -->
+  <!-- Jadwal -->
   <section
     id="section_4"
     class="flex items-center w-full min-h-screen px-6 bg-secondary dark:bg-primary"
@@ -286,7 +295,7 @@
     </div>
   </section>
 
-  <!-- Section 5 -->
+  <!-- Data Santri -->
   <section
     class="w-full min-h-screen bg-secondary dark:bg-primary px-6 md:px-16 lg:px-32 py-20 flex flex-col items-center justify-around gap-8 md:pt-30 z-30"
     id="section_5"

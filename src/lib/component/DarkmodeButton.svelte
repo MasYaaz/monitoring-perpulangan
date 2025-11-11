@@ -12,30 +12,14 @@
   }
 </script>
 
-{#if $showNavbar}
-  <button
-    onclick={toggleDark}
-    aria-label="tombol darkmode"
-    class="hover:cursor-pointer 2xl:mb-1 transition-all duration-300 hover:scale-110 text-secondary dark:text-primary"
-  >
-    {#if dark}
-      <Moon size="23" />
-    {:else}
-      <Sun size="23" />
-    {/if}
-  </button>
-{/if}
-
-{#if !$showNavbar}
-  <button
-    onclick={toggleDark}
-    aria-label="tombol darkmode"
-    class="hover:cursor-pointer 2xl:mb-1 transition-all duration-300 hover:scale-110 text-primary dark:text-secondary"
-  >
-    {#if dark}
-      <Moon size="23" />
-    {:else}
-      <Sun size="23" />
-    {/if}
-  </button>
-{/if}
+<button
+  onclick={toggleDark}
+  aria-label="tombol darkmode"
+  class="hover:cursor-pointer 2xl:mb-1 transition-all duration-300 hover:scale-110 text-secondary dark:text-primary"
+>
+  {#if dark}
+    <Moon size="23" />
+  {:else}
+    <Sun size="23" />
+  {/if}
+</button>

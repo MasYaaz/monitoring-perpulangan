@@ -10,7 +10,7 @@
   import { scrollToSection } from "./lib/utils/scrollTo";
   import { handleScroll } from "./lib/utils/scrollHandler";
   import Navbar from "./lib/component/Navbar.svelte";
-  import { menuItems, mySkill, navItems, profilItems } from "./lib/store/array";
+  import { menuItems, mySkill, profilItems } from "./lib/store/array";
   import Footer from "./lib/component/Footer.svelte";
 
   // Observer
@@ -62,7 +62,7 @@
     ></div>
 
     <div
-      class="flex flex-col justify-center items-center gap-6 min-h-screen px-6 lg:px-10 2xl:grid 2xl:grid-cols-6 2xl:max-w-7xl 2xl:mx-auto 2xl:gap-6"
+      class="flex flex-col justify-center items-center gap-6 h-full px-6 lg:px-10 2xl:grid 2xl:grid-cols-6 2xl:max-w-7xl 2xl:mx-auto 2xl:gap-6 pt-25 md:pt-30 2xl:pt-40"
     >
       <!-- Kolom 1: Gambar tunggal -->
       <div

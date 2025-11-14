@@ -1,33 +1,18 @@
 <script>
-<<<<<<< HEAD
 	import './app.css';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faGithub } from '@fortawesome/free-brands-svg-icons';
 	import { faSearch } from '@fortawesome/free-solid-svg-icons';
 	import { onMount, onDestroy } from 'svelte';
-	import DataProfil from './lib/DataProfil.svelte';
 	import Sertifikat from './lib/Sertifikat.svelte';
 	import { refs, ids, visibleFlags } from './lib/store/sectionRefs';
 	import { scrollToSection } from './lib/utils/scrollTo';
 	import { handleScroll } from './lib/utils/scrollHandler';
 	import Navbar from './lib/component/Navbar.svelte';
-	import { menuItems, mySkill, navItems, profilItems } from './lib/store/array';
+	import { menuItems, mySkill, profilItems } from './lib/store/array';
 	import Footer from './lib/component/Footer.svelte';
-=======
-  import "./app.css";
-  import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
-  import { faGithub } from "@fortawesome/free-brands-svg-icons";
-  import { faSearch } from "@fortawesome/free-solid-svg-icons";
-  import { onMount, onDestroy } from "svelte";
-  import DataProfil from "./lib/DataProfil.svelte";
-  import Sertifikat from "./lib/Sertifikat.svelte";
-  import { refs, ids, visibleFlags } from "./lib/store/sectionRefs";
-  import { scrollToSection } from "./lib/utils/scrollTo";
-  import { handleScroll } from "./lib/utils/scrollHandler";
-  import Navbar from "./lib/component/Navbar.svelte";
-  import { menuItems, mySkill, profilItems } from "./lib/store/array";
-  import Footer from "./lib/component/Footer.svelte";
->>>>>>> c6e91fb108a6adb86992136eaa8fae9a8cba22d1
+	import Denah from './lib/component/Denah.svelte';
+	import Tatib from './lib/component/Tatib.svelte';
 
 	// Observer
 	let observer;
@@ -65,7 +50,7 @@
 </script>
 
 <Navbar />
-<main>
+<main class="bg-secondary dark:bg-primary flex flex-col items-center">
 	<!-- Halaman Utama -->
 	<section
 		class="relative w-full flex justify-center min-h-screen xl:max-h-screen bg-cover bg-[url('./images/back.webp')]"
@@ -75,9 +60,8 @@
 			class="absolute inset-0 bg-gradient-to-b from-secondary/60 to-secondary/100 dark:from-primary/90 dark:to-primary/100"
 		></div>
 
-<<<<<<< HEAD
 		<div
-			class="flex flex-col justify-center items-center gap-6 min-h-screen px-6 lg:px-10 2xl:grid 2xl:grid-cols-6 2xl:max-w-7xl 2xl:mx-auto 2xl:gap-6"
+			class="flex flex-col justify-center items-center gap-6 h-full px-6 lg:px-10 2xl:grid 2xl:grid-cols-6 2xl:max-w-7xl 2xl:mx-auto 2xl:gap-6 pt-25 md:pt-30 2xl:pt-40"
 		>
 			<!-- Kolom 1: Gambar tunggal -->
 			<div
@@ -98,30 +82,6 @@
 					class="w-auto h-[400px] md:h-[5000px] xl:h-[700px] object-cover aspect-square rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105"
 				/>
 			</div>
-=======
-    <div
-      class="flex flex-col justify-center items-center gap-6 h-full px-6 lg:px-10 2xl:grid 2xl:grid-cols-6 2xl:max-w-7xl 2xl:mx-auto 2xl:gap-6 pt-25 md:pt-30 2xl:pt-40"
-    >
-      <!-- Kolom 1: Gambar tunggal -->
-      <div
-        bind:this={refs["gambarRef"]}
-        class="transition-transform ease-out duration-700 hidden 2xl:flex justify-center col-span-3"
-        class:translate-y-10={!visibleFlags["gambarRef"]}
-        class:opacity-0={!visibleFlags["gambarRef"]}
-        class:translate-y-0={visibleFlags["gambarRef"]}
-        class:opacity-100={visibleFlags["gambarRef"]}
-      >
-        <img
-          src="./images/al-akbar.webp"
-          loading="eager"
-          fetchpriority="high"
-          alt="Foto depan"
-          width="685"
-          height="808"
-          class="w-auto h-[400px] md:h-[5000px] xl:h-[700px] object-cover aspect-square rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105"
-        />
-      </div>
->>>>>>> c6e91fb108a6adb86992136eaa8fae9a8cba22d1
 
 			<!-- Kolom 2: Dua gambar bertumpuk -->
 			<div
@@ -175,140 +135,16 @@
 	</section>
 
 	<!-- Denah Al-Akbar -->
-	<section
-		class="w-full min-h-screen bg-secondary dark:bg-primary px-6 md:px-10 lg:px-24 xl:px-32 py-16 md:py-20 lg:py-24 flex flex-col xl:flex-row items-center justify-center gap-10 md:gap-16"
-		id="section_2"
-	>
-		<div class="lg:max-w-6xl gap-5 flex flex-col md:flex-row">
-			<!-- KIRI: Gambar -->
-			<div class="flex flex-col gap-6 w-full">
-				<img
-					src="./images/personal.webp"
-					alt="Foto Personal"
-					bind:this={refs['aboutRef']}
-					class="w-full aspect-square object-cover rounded-3xl shadow-xl transition-all duration-700 ease-out transform h-100 md:h-full"
-					class:-translate-x-24={!visibleFlags['aboutRef']}
-					class:opacity-0={!visibleFlags['aboutRef']}
-					class:translate-x-0={visibleFlags['aboutRef']}
-					class:opacity-100={visibleFlags['aboutRef']}
-				/>
-			</div>
-
-			<!-- KANAN: Konten -->
-			<div class="w-full text-secondary space-y-8 lg:h-full">
-				<!-- Tentang Saya -->
-				<div
-					bind:this={refs['card1Section2R']}
-					class:-translate-x-24={!visibleFlags['card1Section2R']}
-					class:opacity-0={!visibleFlags['card1Section2R']}
-					class:translate-x-0={visibleFlags['card1Section2R']}
-					class:opacity-100={visibleFlags['card1Section2R']}
-					class="bg-brown shadow-xl p-6 rounded-2xl transition-all flex flex-col items-center duration-700 ease-out transform"
-				>
-					<h2
-						class="font-primary text-2xl md:text-3xl lg:text-4xl font-semibold uppercase mb-4 text-center md:text-left"
-					>
-						Tentang Saya
-					</h2>
-					<p
-						class="font-display text-sm md:text-sm lg:text-lg xl:text-xl leading-relaxed text-center"
-					>
-						Saya seorang Front-End developer yang terbiasa mendesain web dari yang sederhana sampai
-						cukup kompleks. Saya juga memiliki pengalaman dalam fotografi, desain grafis menggunakan
-						Photoshop & CorelDraw, serta administrasi dan pencatatan data.
-					</p>
-				</div>
-
-				<!-- Profil Saya -->
-				<div
-					bind:this={refs['card2Section2R']}
-					class:-translate-x-24={!visibleFlags['card2Section2R']}
-					class:opacity-0={!visibleFlags['card2Section2R']}
-					class:translate-x-0={visibleFlags['card2Section2R']}
-					class:opacity-100={visibleFlags['card2Section2R']}
-					class="bg-brown shadow-xl p-6 rounded-2xl space-y-6 transition-all duration-700 ease-out transform"
-				>
-					<h2
-						class="font-primary text-xl md:text-2xl lg:text-3xl font-bold uppercase text-center mb-4"
-					>
-						Profil Saya
-					</h2>
-
-					<!-- Data Profil Grid -->
-					<div class="grid grid-cols-2 p-1 gap-6">
-						<!-- Nama -->
-						{#each profilItems as item (item.tulisan)}
-							<DataProfil {item} />
-						{/each}
-					</div>
-				</div>
-			</div>
-		</div>
+	<section id="section_2" class="w-screen flex px-10 pt-20 min-h-screen flex-col items-center">
+		<Denah />
 	</section>
 
 	<!-- Tata Tertib -->
 	<section
-		class="w-full min-h-screen bg-secondary dark:bg-primary px-6 md:px-16 lg:px-32 py-16 flex flex-col items-center justify-center gap-8 md:pt-30"
+		class="w-full h-screen flex flex-col px-10 pt-20 items-center 2xl:mt-40 justify-center gap-8"
 		id="section_3"
 	>
-		<div class="max-w-lg lg:max-w-6xl flex flex-col items-center">
-			<div
-				bind:this={refs['card1Section3R']}
-				class:-translate-x-24={!visibleFlags['card1Section3R']}
-				class:opacity-0={!visibleFlags['card1Section3R']}
-				class:translate-x-0={visibleFlags['card1Section3R']}
-				class:opacity-100={visibleFlags['card1Section3R']}
-				class="bg-primary dark:bg-brown shadow-light shadow-2xl/20 p-2 md:p-5 mb-10 w-60 md:w-70 lg:w-80 xl:w-100 2xl:w-120 text-center rounded-2xl shadow-xl transition-all duration-700 ease-out transform"
-			>
-				<h2
-					class="font-primary text-secondary text-3xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-extrabold text-light mb-2"
-				>
-					MY SKILLS
-				</h2>
-			</div>
-			<div
-				class="w-full flex flex-col items-center xl:flex-row lg:flex-wrap xl:flex-nowrap justify-center gap-10 px-4 xl:items-stretch"
-			>
-				{#each mySkill as S, i}
-					<div
-						bind:this={refs[`cardSection3_${i}`]}
-						class:-translate-x-24={!visibleFlags[`cardSection3_${i}`]}
-						class:opacity-0={!visibleFlags[`cardSection3_${i}`]}
-						class:translate-x-0={visibleFlags[`cardSection3_${i}`]}
-						class:opacity-100={visibleFlags[`cardSection3_${i}`]}
-						class="w-full lg:w-1/3 mb-6 flex flex-col items-center text-center transition-all duration-700 ease-out transform"
-					>
-						<button aria-label="skill logo">
-							<FontAwesomeIcon
-								icon={S.logo}
-								class="text-primary dark:text-secondary fa-5x md:fa-3x md:mb-3 hover:scale-115 transition-transform duration-300"
-							/>
-						</button>
-						<h2
-							class="font-primary break-words w-full h-20 text-primary dark:text-secondary items-center flex justify-center font-bold text-light p-2 text-2xl md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
-						>
-							{S.judul}
-						</h2>
-						<div
-							class="w-full bg-primary dark:bg-secondary p-6 rounded-2xl shadow-xl/60 flex flex-col justify-between flex-1 h-full"
-						>
-							<p
-								class="font-display text-secondary dark:text-primary break-words w-full h-full text-dark2 text-sm md:text-sm lg:text-md xl:text-md 2xl:text-lg"
-							>
-								{S.deskripsi}
-							</p>
-							<hr class="border-t-3 mt-5 border-secondary dark:border-primary" />
-							<button
-								aria-label="search button"
-								class="mt-4 self-center hover:cursor-pointer hover:text-dark hover:scale-105 transition-all duration-300"
-							>
-								<FontAwesomeIcon icon={faSearch} class="fa-2x text-secondary dark:text-primary" />
-							</button>
-						</div>
-					</div>
-				{/each}
-			</div>
-		</div>
+		<Tatib />
 	</section>
 
 	<!-- Jadwal -->

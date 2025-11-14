@@ -18,8 +18,8 @@
   class="hover:cursor-pointer 2xl:mb-1 transition-all duration-300 hover:scale-110 text-secondary dark:text-primary"
 >
   {#if dark}
-    <Moon size="23" />
+    <Moon size="30" />
   {:else}
-    <Sun size="23" />
+    <Sun size="30" />
   {/if}
 </button>

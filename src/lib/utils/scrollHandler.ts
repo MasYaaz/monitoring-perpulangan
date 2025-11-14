@@ -7,10 +7,10 @@ export function handleScroll() {
   const tinggiHalaman = document.documentElement.scrollHeight;
   const tinggiViewport = window.innerHeight;
 
+  // Fungsi bantu untuk ambil posisi tiap section
   const section = (id: string) => document.getElementById(id)?.offsetTop ?? 0;
-  const topNavbar = document.getElementById("topNavbar");
-  const navbarBottom = topNavbar?.offsetHeight ?? 0;
 
+  // Tentukan section aktif berdasarkan posisi scroll
   const posisiAktif =
     posisi >= section("section_5") ||
     window.scrollY + tinggiViewport >= tinggiHalaman - 5
@@ -23,9 +23,13 @@ export function handleScroll() {
       ? "section_2"
       : "section_1";
 
+  // Update store halaman aktif
   halamanAktif.set(posisiAktif);
-  showNavbar.set(window.scrollY > navbarBottom);
 
+  // Tampilkan navbar hanya setelah user scroll melewati sedikit
+  showNavbar.set(posisiAktif !== "section_1"); // nilai bisa disesuaikan (misal 50px)
+
+  // Tutup menu jika sedang terbuka saat scroll
   if (get(menuTerbuka)) {
     menuTerbuka.set(false);
   }

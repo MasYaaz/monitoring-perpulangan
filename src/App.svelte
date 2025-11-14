@@ -1,4 +1,5 @@
 <script>
+<<<<<<< HEAD
 	import './app.css';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -12,6 +13,21 @@
 	import Navbar from './lib/component/Navbar.svelte';
 	import { menuItems, mySkill, navItems, profilItems } from './lib/store/array';
 	import Footer from './lib/component/Footer.svelte';
+=======
+  import "./app.css";
+  import { FontAwesomeIcon } from "@fortawesome/svelte-fontawesome";
+  import { faGithub } from "@fortawesome/free-brands-svg-icons";
+  import { faSearch } from "@fortawesome/free-solid-svg-icons";
+  import { onMount, onDestroy } from "svelte";
+  import DataProfil from "./lib/DataProfil.svelte";
+  import Sertifikat from "./lib/Sertifikat.svelte";
+  import { refs, ids, visibleFlags } from "./lib/store/sectionRefs";
+  import { scrollToSection } from "./lib/utils/scrollTo";
+  import { handleScroll } from "./lib/utils/scrollHandler";
+  import Navbar from "./lib/component/Navbar.svelte";
+  import { menuItems, mySkill, profilItems } from "./lib/store/array";
+  import Footer from "./lib/component/Footer.svelte";
+>>>>>>> c6e91fb108a6adb86992136eaa8fae9a8cba22d1
 
 	// Observer
 	let observer;
@@ -59,6 +75,7 @@
 			class="absolute inset-0 bg-gradient-to-b from-secondary/60 to-secondary/100 dark:from-primary/90 dark:to-primary/100"
 		></div>
 
+<<<<<<< HEAD
 		<div
 			class="flex flex-col justify-center items-center gap-6 min-h-screen px-6 lg:px-10 2xl:grid 2xl:grid-cols-6 2xl:max-w-7xl 2xl:mx-auto 2xl:gap-6"
 		>
@@ -81,6 +98,30 @@
 					class="w-auto h-[400px] md:h-[5000px] xl:h-[700px] object-cover aspect-square rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105"
 				/>
 			</div>
+=======
+    <div
+      class="flex flex-col justify-center items-center gap-6 h-full px-6 lg:px-10 2xl:grid 2xl:grid-cols-6 2xl:max-w-7xl 2xl:mx-auto 2xl:gap-6 pt-25 md:pt-30 2xl:pt-40"
+    >
+      <!-- Kolom 1: Gambar tunggal -->
+      <div
+        bind:this={refs["gambarRef"]}
+        class="transition-transform ease-out duration-700 hidden 2xl:flex justify-center col-span-3"
+        class:translate-y-10={!visibleFlags["gambarRef"]}
+        class:opacity-0={!visibleFlags["gambarRef"]}
+        class:translate-y-0={visibleFlags["gambarRef"]}
+        class:opacity-100={visibleFlags["gambarRef"]}
+      >
+        <img
+          src="./images/al-akbar.webp"
+          loading="eager"
+          fetchpriority="high"
+          alt="Foto depan"
+          width="685"
+          height="808"
+          class="w-auto h-[400px] md:h-[5000px] xl:h-[700px] object-cover aspect-square rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+>>>>>>> c6e91fb108a6adb86992136eaa8fae9a8cba22d1
 
 			<!-- Kolom 2: Dua gambar bertumpuk -->
 			<div

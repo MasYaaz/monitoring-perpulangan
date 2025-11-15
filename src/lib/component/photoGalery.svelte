@@ -13,7 +13,7 @@
 			touchNavigation: false, // swipe gesture
 			loop: false, // putar galeri terus
 			zoomable: true, // pinch-to-zoom di mobile
-			closeButton: false, // sembunyikan tombol close
+			closeButton: true, // sembunyikan tombol close
 			autoplayVideos: false,
 			closeOnOutsideClick: true,
 			touchFollowAxis: true
@@ -31,7 +31,7 @@
 			<img
 				src={img.thumb || img.src}
 				alt={img.title || 'image'}
-				class="cursor-zoom-in rounded-xl bg-cover"
+				class="w-full max-w-xl cursor-zoom-in rounded-xl bg-cover"
 				loading="eager"
 				fetchpriority="high"
 			/>

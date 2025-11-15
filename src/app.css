@@ -1,27 +1,25 @@
-@import "tailwindcss";
-@import "@fontsource/montserrat-alternates";
-@import "@fontsource/montserrat-alternates/800";
-@import "@fontsource/montserrat-alternates/900";
-@import "@fontsource/montserrat";
+@import 'tailwindcss';
+@import '@fontsource/montserrat-alternates';
+@import '@fontsource/montserrat-alternates/800';
+@import '@fontsource/montserrat-alternates/900';
+@import '@fontsource/montserrat';
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
-  --font-display: "Montserrat", sans-serif;
-  --font-primary: "Montserrat Alternates", sans-serif;
-  --color-primary: #283618;
-  --color-secondary: #fefae0;
-  --color-brown: #dda15e;
-  --color-green: #606c38;
+	--font-display: 'Montserrat', sans-serif;
+	--font-primary: 'Montserrat Alternates', sans-serif;
+	--color-primary: #283618;
+	--color-secondary: #fff;
+	--color-brown: #dda15e;
+	--color-green: #606c38;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 * {
-  user-select: none !important;
+	user-select: none !important;
 }
-
-
 
 /* ==========================================================
    SCROLLBAR: Light Mode
@@ -29,22 +27,22 @@ html {
 
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
-  width: 4px;
+	width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #fefae0;
+	background-color: #fefae0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #283618;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+	background-color: #283618;
+	border-radius: 10px;
+	transition: background-color 0.3s ease;
 }
 
 /* Hover effect (light mode only) */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #606c38; /* hijau olive */
+	background-color: #606c38; /* hijau olive */
 }
 
 /* ==========================================================
@@ -52,16 +50,16 @@ html {
    ========================================================== */
 
 html.dark ::-webkit-scrollbar-track {
-  background-color: #283618;
+	background-color: #283618;
 }
 
 html.dark ::-webkit-scrollbar-thumb {
-  background-color: #fefae0;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+	background-color: #fefae0;
+	border-radius: 10px;
+	transition: background-color 0.3s ease;
 }
 
 /* Hover effect (dark mode only) */
 html.dark ::-webkit-scrollbar-thumb:hover {
-  background-color: #dda15e; /* coklat muda */
+	background-color: #dda15e; /* coklat muda */
 }

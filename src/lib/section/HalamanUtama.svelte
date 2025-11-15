@@ -1,69 +1,78 @@
 <script lang="ts">
 	import { menuItems } from '../store/array';
+	import { isDark } from '../store/darkMode';
 	import { scrollToSection } from '../utils/scrollTo';
+	$: logoSrc = $isDark ? './logo-light.svg' : './logo-dark.svg';
 </script>
 
 <section
-	class="relative flex w-full justify-center items-center min-h-screen bg-cover bg-[url('./images/back.webp')]"
+	class="relative flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-[url('./images/back.webp')] bg-cover"
 	id="section_1"
 >
 	<div
-		class="absolute z-0 inset-0 bg-gradient-to-b from-secondary/60 to-secondary/100 dark:from-primary/90 dark:to-primary/100"
+		class="from-secondary/60 to-secondary/100 dark:from-primary/90 dark:to-primary/100 absolute inset-0 z-0 bg-gradient-to-b"
 	></div>
 
-	<div
-		class="flex z-10 flex-col justify-around min-h-screen items-center gap-6 2xl:grid 2xl:grid-cols-6 2xl:max-w-7xl 2xl:gap-6 pt-25 md:pt-30 2xl:pt-40"
-	>
-		<!-- Kolom 1: Gambar tunggal -->
-		<div class="transition-all duration-700 col-span-3 hidden 2xl:flex">
-			<img
-				src="./images/al-akbar.webp"
-				loading="eager"
-				fetchpriority="high"
-				alt="Foto depan"
-				width="685"
-				height="808"
-				class="w-auto h-[400px] md:h-[5000px] xl:h-[700px] object-cover aspect-square rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105"
-			/>
-		</div>
-
-		<!-- Kolom 2: Dua gambar bertumpuk -->
+	<div class="z-10 flex w-full flex-col items-center gap-5 pt-20 md:pt-30 2xl:pt-30">
 		<div
-			class="transition-transform ease-out duration-700 flex justify-center items-center col-span-2"
+			class="flex h-full flex-col items-center justify-around 2xl:grid 2xl:max-w-7xl 2xl:grid-cols-6 2xl:gap-6"
 		>
-			<div class="flex flex-col gap-5 px-4 h-[400px] md:h-[500px] xl:h-[700px]">
+			<!-- Kolom 1: Gambar tunggal -->
+			<div class="col-span-3 hidden pl-8 transition-all duration-700 2xl:flex">
 				<img
 					src="./images/al-akbar.webp"
 					loading="eager"
 					fetchpriority="high"
 					alt="Foto depan"
-					class="w-auto h-full object-cover rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105"
-				/>
-				<img
-					src="./images/al-akbar.webp"
-					loading="eager"
-					fetchpriority="high"
-					alt="Foto depan"
-					class="w-auto h-full object-cover rounded-2xl shadow-xl hidden 2xl:flex transition-transform duration-300 hover:scale-105"
+					width="685"
+					height="808"
+					class="aspect-square h-[400px] w-auto rounded-2xl object-cover shadow-xl transition-transform duration-300 hover:scale-105 md:h-[5000px] xl:h-[700px]"
 				/>
 			</div>
-		</div>
 
-		<!-- Kolom 3: Bagian teks -->
-		<div
-			class="flex flex-row 2xl:flex-col items-left justify-center text-center gap-1 lg:gap-5 h-full xl:h-[700px] transition-transform ease-out duration-700 grid-cols-2 2xl:grid-cols-4"
-		>
-			{#each menuItems as m}
-				<button
-					onclick={() => scrollToSection(m.id)}
-					class="flex aspect-square w-20 h-20 lg:h-40 flex-col items-center p-2 lg:w-40 justify-center gap-1 rounded-3xl bg-green-300 uppercase shadow-lg transition-transform duration-200 hover:scale-105"
+			<!-- Kolom 2: Dua gambar bertumpuk -->
+			<div
+				class="col-span-2 flex w-screen items-center justify-center px-10 transition-transform duration-700 ease-out md:px-16 lg:w-full lg:px-0"
+			>
+				<div
+					class="flex h-full w-full flex-col-reverse gap-5 pb-6 md:px-0 lg:pb-10 xl:h-[700px] 2xl:flex-col 2xl:pb-0"
 				>
-					<svelte:component this={m.icon} class="h-6 w-6 2xl:w-12 2xl:h-12" />
-					<p class="mt-1 font-bold w-full text-[6px] 2xl:text-base">
-						{m.text}
-					</p>
-				</button>
-			{/each}
+					<div
+						class="relative flex h-full w-full items-center justify-center rounded-2xl bg-[url('./images/al-akbar.webp')] bg-[50%] p-10 shadow-xl transition-transform duration-300 hover:scale-105 2xl:h-[50%]"
+					>
+						<div class="bg-primary/90 dark:bg-secondary/90 absolute inset-0 z-0 rounded-2xl"></div>
+						<img
+							src={logoSrc}
+							class="z-10 h-full object-cover"
+							loading="eager"
+							fetchpriority="high"
+							alt="Foto depan"
+						/>
+					</div>
+					<div
+						class="bg-primary dark:bg-secondary text-secondary dark:text-primary z-10 flex h-full items-center rounded-2xl p-3 px-4 text-center text-xl font-black uppercase md:p-5 md:px-10 md:text-3xl lg:text-4xl xl:w-fit 2xl:max-w-7xl 2xl:text-4xl"
+					>
+						<h1>Monitoring Perpulangan IKPM Surabaya</h1>
+					</div>
+				</div>
+			</div>
+
+			<!-- Kolom 3: Bagian teks -->
+			<div
+				class="flex h-full w-full grid-cols-2 flex-row items-start justify-around gap-1 px-5 text-center transition-transform duration-700 ease-out lg:gap-5 xl:h-[700px] 2xl:grid-cols-4 2xl:flex-col 2xl:px-0"
+			>
+				{#each menuItems as m}
+					<button
+						onclick={() => scrollToSection(m.id)}
+						class="text-secondary dark:text-primary dark:bg-secondary bg-primary flex aspect-square flex-col items-center justify-center gap-1 rounded-3xl p-3 uppercase shadow-lg transition-transform duration-200 hover:scale-105 hover:cursor-pointer lg:h-40 lg:w-40"
+					>
+						<svelte:component this={m.icon} class="h-6 w-6 md:h-12 md:w-12 2xl:h-12 2xl:w-12" />
+						<p class="mt-1 w-full text-[6px] font-black lg:text-sm 2xl:text-base">
+							{m.text}
+						</p>
+					</button>
+				{/each}
+			</div>
 		</div>
 	</div>
 </section>

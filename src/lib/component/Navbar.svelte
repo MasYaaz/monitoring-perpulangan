@@ -12,7 +12,7 @@
 <header class="flex w-full justify-center">
 	<div
 		transition:fade={{ duration: 300 }}
-		class="bg-primary dark:bg-secondary fixed top-2 z-50 mt-2 flex h-12 w-[92%] justify-center rounded-md rounded-tr-xl rounded-bl-xl px-8 shadow-xl/50 transition-all duration-200 ease-in md:h-16 md:w-[90%] md:px-20 xl:h-20 xl:rounded-lg xl:rounded-tr-3xl xl:rounded-bl-3xl 2xl:top-4"
+		class="bg-primary dark:bg-secondary dark:shadow-secondary fixed top-2 z-50 mt-2 flex h-12 w-[92%] justify-center rounded-md rounded-tr-xl rounded-bl-xl px-8 shadow-md/50 transition-all duration-200 ease-in md:h-16 md:w-[90%] md:px-12 lg:px-16 xl:h-20 xl:rounded-lg xl:rounded-tr-3xl xl:rounded-bl-3xl 2xl:top-4"
 	>
 		<div class="flex w-full justify-between">
 			<!-- Logo -->
@@ -32,7 +32,7 @@
 				<nav
 					in:fly={{ x: 50, opacity: 0, duration: 400, easing: cubicOut }}
 					out:fly={{ x: -50, opacity: 0, duration: 300 }}
-					class="hidden basis-2/3 items-center justify-end p-2 transition-transform duration-500 ease-out 2xl:flex"
+					class="hidden basis-2/3 items-center justify-end p-2 transition-transform duration-500 ease-out lg:flex"
 				>
 					{#if !$isDark}
 						{#each navItems as item}
@@ -68,7 +68,7 @@
 			<div class="flex h-full gap-2">
 				<DarkmodeButton />
 				<!-- Hamburger -->
-				<button class="2xl:hidden" onclick={toggleMenu} aria-label="tombol navbar">
+				<button class="lg:hidden" onclick={toggleMenu} aria-label="tombol navbar">
 					<svg
 						class={`h-6 w-6 ${$isDark ? 'text-primary' : 'text-secondary'}`}
 						fill="none"
@@ -95,11 +95,13 @@
 						<button
 							onclick={() => scrollToSection(item.id)}
 							aria-label={item.aria}
-							class="hover:text-secondary my-4 w-[80%] border-b p-2 text-xl font-semibold tracking-wide text-white transition-colors"
+							class="hover:text-secondary bg-primary/20 my-4 flex w-[80%] items-center justify-center gap-2 rounded-4xl p-8 text-2xl font-semibold tracking-wide text-white uppercase transition-colors"
 						>
-							<svelte:component this={item.icon} size="50" />
+							<svelte:component this={item.icon} size="25" />
+							{item.aria}
 						</button>
 					{/each}
+					<img src="./dark-theme.svg" alt="logo satgas" class="mt-5 h-20 w-auto" />
 				</nav>
 			{/if}
 		</div>

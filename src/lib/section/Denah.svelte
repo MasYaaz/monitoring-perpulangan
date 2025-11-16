@@ -8,11 +8,13 @@
 
 <section
 	id="section_2"
-	class="flex min-h-screen w-full flex-col items-center justify-center px-10 pt-20 md:pt-30 2xl:pt-40"
+	class="flex min-h-screen w-full flex-col items-center justify-center px-2 pt-20 md:pt-25 2xl:pt-30"
 >
-	<div class="flex flex-col items-center gap-10 px-10 2xl:max-w-7xl dark:text-white">
-		<div class="flex h-full w-full flex-col items-center justify-between gap-2">
-			<div class="dark:bg-secondary dark:text-primary bg-primary text-secondary rounded-3xl p-5">
+	<div class="flex flex-col items-center gap-10 px-10 xl:max-w-7xl dark:text-white">
+		<div class="flex h-full w-full flex-col items-center justify-between gap-5">
+			<div
+				class="dark:bg-secondary dark:text-primary bg-primary text-secondary dark:shadow-secondary rounded-3xl p-5 shadow-md/50"
+			>
 				<MapPinned class="h-20 w-20 lg:h-25 lg:w-25" />
 			</div>
 
@@ -23,7 +25,7 @@
 					Denah Masjid
 				</h2>
 				<h2
-					class="font-heading -mt-1 text-center text-4xl font-black uppercase lg:-mt-3 lg:text-7xl dark:text-white"
+					class="font-heading -mt-1 text-center text-3xl font-black uppercase lg:-mt-3 lg:text-7xl dark:text-white"
 				>
 					Al-Akbar
 				</h2>

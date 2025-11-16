@@ -27,11 +27,11 @@
 
 <div>
 	{#each images as img}
-		<a href={img.src} class="glightbox">
+		<a href={img.src} class="glightbox5">
 			<img
 				src={img.thumb || img.src}
 				alt={img.title || 'image'}
-				class="w-full max-w-xl cursor-zoom-in rounded-xl bg-cover"
+				class="dark:shadow-secondary w-full max-w-xl cursor-zoom-in rounded-xl bg-cover shadow-lg/50 duration-200 hover:scale-105"
 				loading="eager"
 				fetchpriority="high"
 			/>

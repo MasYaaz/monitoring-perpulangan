@@ -12,13 +12,12 @@
 	<div
 		class="from-secondary/60 to-secondary/100 dark:from-primary/90 dark:to-primary/100 absolute inset-0 z-0 bg-gradient-to-b"
 	></div>
-
-	<div class="z-10 flex w-full flex-col items-center gap-5 pt-20 md:pt-30 2xl:pt-30">
+	<div class="z-10 flex h-full w-full flex-col items-center gap-5 pt-20 md:pt-30 lg:pt-30 xl:pt-30">
 		<div
-			class="flex h-full flex-col items-center justify-around 2xl:grid 2xl:max-w-7xl 2xl:grid-cols-6 2xl:gap-6"
+			class="flex h-full w-full flex-col items-center justify-around lg:grid lg:grid-cols-6 lg:gap-4 lg:px-12 xl:max-w-7xl xl:gap-6"
 		>
 			<!-- Kolom 1: Gambar tunggal -->
-			<div class="col-span-3 hidden pl-8 transition-all duration-700 2xl:flex">
+			<div class="col-span-3 hidden transition-all duration-700 lg:flex">
 				<img
 					src="./images/al-akbar.webp"
 					loading="eager"
@@ -26,19 +25,17 @@
 					alt="Foto depan"
 					width="685"
 					height="808"
-					class="aspect-square h-[400px] w-auto rounded-2xl object-cover shadow-xl transition-transform duration-300 hover:scale-105 md:h-[5000px] xl:h-[700px]"
+					class="aspect-square h-[400px] w-auto rounded-2xl object-cover shadow-xl transition-transform duration-300 hover:scale-105 md:h-[500px] lg:h-[600px] xl:h-[700px]"
 				/>
 			</div>
 
 			<!-- Kolom 2: Dua gambar bertumpuk -->
-			<div
-				class="col-span-2 flex w-screen items-center justify-center px-10 transition-transform duration-700 ease-out md:px-16 lg:w-full lg:px-0"
-			>
+			<div class="col-span-2 flex items-center justify-center px-5 md:px-16 lg:px-0">
 				<div
-					class="flex h-full w-full flex-col-reverse gap-5 pb-6 md:px-0 lg:pb-10 xl:h-[700px] 2xl:flex-col 2xl:pb-0"
+					class="flex h-full w-full flex-col-reverse gap-5 pb-6 md:px-0 lg:h-[600px] lg:flex-col lg:pb-0 xl:h-[700px]"
 				>
 					<div
-						class="relative flex h-full w-full items-center justify-center rounded-2xl bg-[url('./images/al-akbar.webp')] bg-[50%] p-10 shadow-xl transition-transform duration-300 hover:scale-105 2xl:h-[50%]"
+						class="relative flex h-[60%] w-full items-center justify-center rounded-2xl bg-[url('./images/al-akbar.webp')] bg-[50%] p-10 shadow-xl transition-transform duration-300 hover:scale-105 2xl:h-[50%]"
 					>
 						<div class="bg-primary/90 dark:bg-secondary/90 absolute inset-0 z-0 rounded-2xl"></div>
 						<img
@@ -50,24 +47,27 @@
 						/>
 					</div>
 					<div
-						class="bg-primary dark:bg-secondary text-secondary dark:text-primary z-10 flex h-full items-center rounded-2xl p-3 px-4 text-center text-xl font-black uppercase md:p-5 md:px-10 md:text-3xl lg:text-4xl xl:w-fit 2xl:max-w-7xl 2xl:text-4xl"
+						class="bg-primary dark:bg-secondary text-secondary dark:text-primary z-10 flex h-full items-center justify-center rounded-2xl p-3 px-4 text-center text-2xl font-black uppercase duration-300 hover:scale-105 md:p-5 md:px-10 md:text-3xl lg:text-4xl xl:w-fit xl:max-w-7xl xl:text-4xl"
 					>
-						<h1>Monitoring Perpulangan IKPM Surabaya</h1>
+						<h1>Monitoring Perpulangan<br />IKPM Surabaya</h1>
 					</div>
 				</div>
 			</div>
 
 			<!-- Kolom 3: Bagian teks -->
 			<div
-				class="flex h-full w-full grid-cols-2 flex-row items-start justify-around gap-1 px-5 text-center transition-transform duration-700 ease-out lg:gap-5 xl:h-[700px] 2xl:grid-cols-4 2xl:flex-col 2xl:px-0"
+				class="xl:h-[700px]lg:grid-cols-4 flex h-full w-full grid-cols-2 flex-row items-start justify-around gap-1 px-5 text-center transition-transform duration-700 ease-out lg:h-[600px] lg:flex-col lg:gap-5 lg:px-0 xl:h-[700px] xl:px-0"
 			>
 				{#each menuItems as m}
 					<button
 						onclick={() => scrollToSection(m.id)}
-						class="text-secondary dark:text-primary dark:bg-secondary bg-primary flex aspect-square flex-col items-center justify-center gap-1 rounded-3xl p-3 uppercase shadow-lg transition-transform duration-200 hover:scale-105 hover:cursor-pointer lg:h-40 lg:w-40"
+						class="text-secondary dark:text-primary dark:bg-secondary bg-primary flex aspect-square h-15 w-15 flex-col items-center justify-center gap-1 rounded-2xl uppercase shadow-lg transition-transform duration-200 hover:scale-105 hover:cursor-pointer md:h-25 md:w-25 lg:h-33 lg:w-33 lg:rounded-3xl lg:p-3 xl:h-40 xl:w-40"
 					>
-						<svelte:component this={m.icon} class="h-6 w-6 md:h-12 md:w-12 2xl:h-12 2xl:w-12" />
-						<p class="mt-1 w-full text-[6px] font-black lg:text-sm 2xl:text-base">
+						<svelte:component
+							this={m.icon}
+							class="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 xl:h-16 xl:w-16"
+						/>
+						<p class="mt-1 w-full text-[6px] font-black lg:text-sm xl:text-base">
 							{m.text}
 						</p>
 					</button>

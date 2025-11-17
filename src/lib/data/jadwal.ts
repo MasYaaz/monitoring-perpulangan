@@ -1,4 +1,4 @@
-export const jadwal = {
+const jadwal = {
 	perpulangan: {
 		jadwalKampusPutra: [
 			{ nama: 'Gontor 1', keberangkatan: '02.00 WIB', kedatangan: '06.00 WIB' },
@@ -29,3 +29,16 @@ export const jadwal = {
 		]
 	}
 };
+
+export const jadwalSemua = [
+	{
+		title: 'Gontor Putri',
+		subtitle: 'Senin, 8 September 2025',
+		data: jadwal.perpulangan.jadwalKampusPutri
+	},
+	{
+		title: 'Gontor Putra',
+		subtitle: 'Selasa, 9 September 2025',
+		data: jadwal.perpulangan.jadwalKampusPutra
+	}
+];

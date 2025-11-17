@@ -11,6 +11,7 @@ export const toggleMenu = () => {
 
 export const scrollToSection = (id: string) => {
 	const el = document.getElementById(id);
+	menuTerbuka.update((val) => !val);
 	if (el) {
 		el.scrollIntoView({ behavior: 'smooth' });
 	}

@@ -27,7 +27,7 @@
 
 <div>
 	{#each images as img}
-		<a href={img.src} class="glightbox5">
+		<a href={img.src} class="glightbox">
 			<img
 				src={img.thumb || img.src}
 				alt={img.title || 'image'}

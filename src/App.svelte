@@ -16,7 +16,7 @@
 </script>
 
 <Navbar />
-<main class="bg-secondary dark:bg-primary flex flex-col items-center">
+<main class="bg-secondary dark:bg-primary flex w-full flex-col items-center">
 	<!-- Halaman Utama -->
 	<HalamanUtama />
 

@@ -8,7 +8,7 @@
 
 <section
 	id="section_2"
-	class="flex min-h-screen w-full flex-col items-center justify-center px-2 pt-20 md:pt-25 2xl:pt-30"
+	class="flex min-h-screen w-full flex-col items-center justify-center px-2 md:pt-25 2xl:pt-30"
 >
 	<div class="flex flex-col items-center gap-10 px-10 xl:max-w-7xl dark:text-white">
 		<div class="flex h-full w-full flex-col items-center justify-between gap-5">

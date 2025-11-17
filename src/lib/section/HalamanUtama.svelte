@@ -13,13 +13,13 @@
 		class="from-secondary/60 to-secondary/100 dark:from-primary/90 dark:to-primary/100 absolute inset-0 z-0 bg-gradient-to-b"
 	></div>
 	<div
-		class="z-10 flex h-full w-full flex-col items-center gap-5 px-10 pt-20 md:pt-30 lg:pt-30 xl:pt-30"
+		class="z-10 flex h-screen w-full flex-col items-center gap-5 px-10 pt-20 md:pt-30 lg:pt-40 xl:h-full xl:pt-30"
 	>
 		<div
-			class="flex h-full w-full flex-col items-center justify-around lg:grid lg:grid-cols-6 lg:gap-4 lg:px-12 xl:max-w-7xl xl:gap-6"
+			class="flex h-full w-full flex-col items-center justify-around lg:gap-4 lg:px-12 xl:grid xl:max-w-7xl xl:grid-cols-6 xl:gap-6"
 		>
 			<!-- Kolom 1: Gambar tunggal -->
-			<div class="col-span-3 hidden h-full transition-all duration-700 lg:flex">
+			<div class="col-span-3 hidden h-full transition-all duration-700 xl:flex">
 				<img
 					src="./images/al-akbar.webp"
 					loading="eager"
@@ -27,27 +27,27 @@
 					alt="Foto depan"
 					width="685"
 					height="808"
-					class="aspect-square w-auto rounded-2xl object-cover shadow-xl transition-transform duration-300 hover:scale-105"
+					class="aspect-square w-auto rounded-2xl object-cover shadow-xl"
 				/>
 			</div>
 
 			<!-- Kolom 2: Dua gambar bertumpuk -->
-			<div class="col-span-2 flex h-full w-full items-center justify-center">
-				<div class="flex h-full w-full flex-col-reverse gap-5 pb-6 lg:flex-col lg:pb-0">
+			<div class="col-span-2 flex h-[90%] w-full items-center justify-center md:h-[70%] xl:h-full">
+				<div class="flex h-full w-full flex-col-reverse gap-5 xl:flex-col">
 					<div
-						class="relative flex h-full w-full items-center justify-center rounded-2xl bg-[url('./images/al-akbar.webp')] bg-[50%] p-10 shadow-xl transition-transform duration-300 hover:scale-105"
+						class="relative flex h-[80%] w-full items-center justify-center rounded-2xl bg-[url('./images/al-akbar.webp')] bg-[50%] p-10 shadow-xl xl:h-full"
 					>
 						<div class="bg-primary/90 dark:bg-secondary/90 absolute inset-0 z-0 rounded-2xl"></div>
 						<img
 							src={logoSrc}
-							class="z-10 h-full object-cover"
+							class="z-10 h-full w-fit"
 							loading="eager"
 							fetchpriority="high"
 							alt="Foto depan"
 						/>
 					</div>
 					<div
-						class="bg-primary dark:bg-secondary text-secondary dark:text-primary flex h-full flex-col items-center justify-center rounded-2xl p-3 px-4 text-center font-black uppercase duration-300 hover:scale-105 md:p-5 md:px-10 xl:max-w-7xl"
+						class="bg-primary dark:bg-secondary text-secondary dark:text-primary flex h-[20%] w-full flex-col items-center justify-center rounded-2xl p-3 px-4 text-center font-black uppercase md:p-5 md:px-10 lg:h-full xl:max-w-7xl"
 					>
 						<h1 class="text-xl leading-5 md:text-2xl lg:text-3xl lg:leading-tight xl:text-4xl">
 							Monitoring Perpulangan
@@ -59,12 +59,12 @@
 
 			<!-- Kolom 3: Bagian tombol -->
 			<div
-				class="flex h-full w-full grid-cols-2 flex-row items-center justify-between text-center transition-transform duration-700 ease-out lg:grid-cols-4 lg:flex-col lg:items-end lg:gap-2 lg:px-0"
+				class="flex h-[20%] w-full grid-cols-2 flex-row items-center justify-between text-center md:pt-10 xl:h-full xl:grid-cols-4 xl:flex-col xl:items-end xl:gap-2 xl:px-0 xl:pt-0"
 			>
 				{#each menuItems as m}
 					<button
 						onclick={() => scrollToSection(m.id)}
-						class="text-secondary dark:text-primary dark:bg-secondary bg-primary flex aspect-square h-14 w-14 flex-col items-center justify-center gap-1 rounded-2xl uppercase shadow-lg transition-transform duration-200 hover:scale-105 hover:cursor-pointer md:h-28 md:w-28 lg:h-33 lg:w-33 lg:rounded-3xl lg:p-3 xl:h-40 xl:w-40"
+						class="text-secondary dark:text-primary dark:bg-secondary bg-primary flex aspect-square h-[60%] w-[24%] flex-col items-center justify-center rounded-2xl uppercase shadow-lg transition-transform duration-200 hover:scale-105 hover:cursor-pointer md:h-28 md:w-28 lg:h-33 lg:w-33 lg:rounded-3xl lg:p-3 xl:h-40 xl:w-40"
 					>
 						<svelte:component
 							this={m.icon}

@@ -4,13 +4,13 @@ import { Clock, House, MapPinned, NotebookPen, Users } from 'lucide-svelte';
 export const menuItems = [
 	{
 		id: 'section_2',
-		icon: NotebookPen,
-		text: 'Tata Tertib'
+		icon: MapPinned,
+		text: 'Denah'
 	},
 	{
 		id: 'section_3',
-		icon: MapPinned,
-		text: 'Denah'
+		icon: NotebookPen,
+		text: 'Tata Tertib'
 	},
 	{
 		id: 'section_4',

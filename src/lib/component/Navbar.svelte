@@ -89,19 +89,19 @@
 			{#if $menuTerbuka}
 				<nav
 					transition:slide={{ duration: 400 }}
-					class="fixed inset-0 z-40 flex flex-col items-center justify-center bg-gray-900/50 backdrop-blur-sm 2xl:hidden"
+					class="fixed inset-0 z-40 flex h-screen flex-col items-center justify-center gap-2 bg-gray-900/50 backdrop-blur-sm md:gap-4 lg:hidden"
 				>
 					{#each navItems as item}
 						<button
 							onclick={() => scrollToSection(item.id)}
 							aria-label={item.aria}
-							class="hover:text-secondary bg-primary/20 my-4 flex w-[80%] items-center justify-center gap-2 rounded-4xl p-8 text-2xl font-semibold tracking-wide text-white uppercase transition-colors"
+							class="hover:text-secondary bg-primary/20 flex w-[90%] items-center justify-center gap-2 rounded-4xl p-8 text-xl font-semibold tracking-wide text-white uppercase transition-colors"
 						>
 							<svelte:component this={item.icon} size="25" />
 							{item.aria}
 						</button>
 					{/each}
-					<img src="./dark-theme.svg" alt="logo satgas" class="mt-5 h-20 w-auto" />
+					<img src="./dark-theme.svg" alt="logo satgas" class="h-15 w-auto pt-5 md:h-25" />
 				</nav>
 			{/if}
 		</div>

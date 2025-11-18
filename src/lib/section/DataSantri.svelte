@@ -5,11 +5,11 @@
 </script>
 
 <section
-	class="relative flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-[url('./images/bg4.webp')] bg-cover bg-center px-10 pt-20 md:pt-25 2xl:pt-30"
+	class="relative flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-[url('./images/bg4.webp')] bg-cover px-10 pt-20 md:pt-25 2xl:pt-30"
 	id="section_5"
 >
 	<div
-		class="from-secondary/100 via-secondary/60 to-secondary/100 dark:from-primary/100 dark:via-primary/80 dark:to-primary/100 absolute inset-0 z-0 bg-gradient-to-b"
+		class="from-secondary/100 via-secondary/60 to-secondary/100 dark:from-primary/100 dark:via-primary/90 dark:to-primary/100 absolute inset-0 z-0 bg-gradient-to-b"
 	></div>
 	<!-- Judul section -->
 	<div class="z-10 flex h-full w-full flex-col items-center justify-between gap-5">

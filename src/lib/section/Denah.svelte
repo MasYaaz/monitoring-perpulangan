@@ -8,7 +8,7 @@
 
 <section
 	id="section_2"
-	class="relative flex min-h-screen w-full flex-col items-center justify-center bg-[url('./images/bg1.webp')] bg-cover bg-center px-2 md:pt-25 2xl:pt-30"
+	class="relative flex min-h-screen w-full flex-col items-center justify-center bg-[url('./images/bg1.webp')] bg-cover px-2 md:pt-25 2xl:pt-30"
 >
 	<div
 		class="from-secondary/100 via-secondary/60 to-secondary/100 dark:from-primary/100 dark:via-primary/85 dark:to-primary/100 absolute inset-0 z-0 bg-gradient-to-b"

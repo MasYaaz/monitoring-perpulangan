@@ -28,11 +28,13 @@
 	});
 </script>
 
-<div class="z-20 mt-2 flex w-full max-w-4xl flex-col justify-center gap-2 md:flex-row">
+<div
+	class="z-20 mt-2 flex w-full max-w-4xl flex-col justify-center gap-2 text-xs md:flex-row md:text-sm lg:text-base"
+>
 	<div class="flex w-full justify-between lg:w-[50%]">
 		<div class="relative w-[49%]">
 			<button
-				class="bg-primary dark:bg-secondary dark:text-primary text-secondary flex w-full cursor-pointer justify-between rounded-xl p-2 px-3 text-left font-[500]"
+				class="bg-primary dark:bg-secondary dark:text-primary text-secondary flex w-full cursor-pointer items-center justify-between rounded-xl p-1 px-2 text-left font-[500] md:p-2 md:px-3"
 				onclick={(e) => {
 					e.stopPropagation();
 					openPondok = !openPondok;
@@ -75,7 +77,7 @@
 
 		<div class="relative w-[49%]">
 			<button
-				class="bg-primary dark:bg-secondary dark:text-primary text-secondary flex w-full cursor-pointer justify-between rounded-xl p-2 px-3 text-left font-[500]"
+				class="bg-primary dark:bg-secondary dark:text-primary text-secondary flex w-full cursor-pointer items-center justify-between rounded-xl p-1 px-2 text-left font-[500] md:p-2 md:px-3"
 				onclick={(e) => {
 					e.stopPropagation();
 					openKendaraan = !openKendaraan;
@@ -118,13 +120,13 @@
 	</div>
 
 	<div
-		class="bg-primary text-secondary dark:bg-secondary dark:text-primary flex w-full items-center rounded-xl p-2 font-[500] md:w-[50%]"
+		class="bg-primary text-secondary dark:bg-secondary dark:text-primary flex w-full items-center justify-between rounded-xl p-1 font-[500] md:w-[50%] md:p-2"
 	>
-		<Search class="w-[10%]" />
+		<Search class="w-[8%] px-1 md:w-[10%]" />
 		<input
 			type="text"
 			placeholder="Cari nama santri / santriwati"
-			class="placeholder-secondary dark:placeholder-primary w-[85%] focus:ring-0 focus:outline-none"
+			class="placeholder-secondary dark:placeholder-primary w-[90%] focus:ring-0 focus:outline-none"
 			bind:value={$filterSearch}
 		/>
 	</div>

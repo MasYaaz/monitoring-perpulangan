@@ -3,6 +3,7 @@
 	import { isDark } from '../store/darkMode';
 	import { scrollToSection } from '../utils/scrollTo';
 	$: logoSrc = $isDark ? './logo-light.svg' : './logo-dark.svg';
+	$: logoBesarSrc = $isDark ? './light-theme.svg' : './dark-theme.svg';
 </script>
 
 <section
@@ -12,9 +13,9 @@
 	<div
 		class="from-secondary/60 to-secondary/100 dark:from-primary/90 dark:to-primary/100 absolute inset-0 z-0 bg-gradient-to-b"
 	></div>
-	<div class="z-10 flex h-full w-full flex-col items-center gap-5">
+	<div class="z-10 flex h-screen w-full flex-col items-center gap-5 xl:h-full">
 		<div
-			class="flex h-screen w-full flex-col items-center justify-center px-10 pt-25 md:pt-25 lg:h-full lg:gap-4 lg:px-12 lg:pt-25 xl:grid xl:max-w-7xl xl:grid-cols-6 xl:gap-6 xl:pt-30"
+			class="flex h-full w-full flex-col items-center justify-center px-10 pt-25 md:pt-25 lg:h-full lg:gap-4 lg:px-12 lg:pt-25 xl:grid xl:max-w-7xl xl:grid-cols-6 xl:gap-6 xl:pt-30"
 		>
 			<!-- Kolom 1: Gambar tunggal -->
 			<div class="col-span-3 hidden h-full transition-all duration-700 xl:flex">
@@ -38,14 +39,20 @@
 						<div class="bg-primary/90 dark:bg-secondary/90 absolute inset-0 z-0 rounded-2xl"></div>
 						<img
 							src={logoSrc}
-							class="z-10 h-full w-fit"
+							class="z-10 h-full w-fit lg:hidden xl:flex"
+							loading="eager"
+							fetchpriority="high"
+							alt="Foto depan"
+						/><img
+							src={logoBesarSrc}
+							class="z-10 hidden h-full w-fit lg:flex xl:hidden"
 							loading="eager"
 							fetchpriority="high"
 							alt="Foto depan"
 						/>
 					</div>
 					<div
-						class="bg-primary dark:bg-secondary text-secondary dark:text-primary flex h-[20%] w-full flex-col items-center justify-center rounded-2xl p-3 px-4 text-center font-black uppercase md:p-5 md:px-10 lg:h-full xl:max-w-7xl"
+						class="bg-primary dark:bg-secondary text-secondary dark:text-primary flex h-[20%] w-full flex-col items-center justify-center rounded-2xl p-3 px-4 text-center font-black uppercase md:p-5 md:px-10 xl:max-w-7xl"
 					>
 						<h1 class="text-xl leading-5 md:text-2xl lg:text-3xl lg:leading-tight xl:text-4xl">
 							Monitoring Perpulangan

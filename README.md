@@ -1,6 +1,6 @@
-# MyPorto - Web Portofolio
+# Website Informasi Perpulangan - Arus Balik Konsulat Surabaya
 
-![Foto](docs/Foto-web1.png)
+![Foto](public/thumbnail.webp)
 
 Selamat Datang di Dokumentasi Web Portofolio kedua saya.
 Ini merupakan web portofolio kedua yang telah saya buat dengan menggunakan framework Vite + Svelte dan Tailwind CSS.
@@ -9,7 +9,7 @@ Ini merupakan web portofolio kedua yang telah saya buat dengan menggunakan frame
 
 [![My Skills](https://skillicons.dev/icons?i=tailwindcss,svelte,vite)]()
 
-[![Tailwind CSS](https://img.shields.io/badge/tailwindcss-563D7C?style=for-the-badge&logo=tailwindcss&logoColor=white)]() [![Svelte](https://img.shields.io/badge/Svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white)]() [![Vite](https://img.shields.io/badge/Vite-%23f1413d.svg?style=for-the-badge&logo=vite&logoColor=white)]()
+[![Tailwind CSS](https://img.shields.io/badge/tailwindcss-563D7C?style=for-the-badge&logo=tailwindcss&logoColor=white)]() [![Svelte](https://img.shields.io/badge/Svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white)]() [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=fff)]()
 
 ## Bahasa Pemrograman Yang di Gunakan
 

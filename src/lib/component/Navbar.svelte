@@ -95,7 +95,7 @@
 						<button
 							onclick={() => scrollToSection(item.id)}
 							aria-label={item.aria}
-							class="hover:text-secondary bg-primary/20 flex w-[90%] items-center justify-center gap-2 rounded-4xl p-8 text-xl font-semibold tracking-wide text-white uppercase transition-colors"
+							class="bg-primary/20 flex w-[90%] items-center justify-center gap-2 rounded-4xl p-8 text-xl font-semibold tracking-wide text-white uppercase"
 						>
 							<svelte:component this={item.icon} size="25" />
 							{item.aria}

@@ -12,11 +12,9 @@
 	<div
 		class="from-secondary/60 to-secondary/100 dark:from-primary/90 dark:to-primary/100 absolute inset-0 z-0 bg-gradient-to-b"
 	></div>
-	<div
-		class="z-10 flex h-screen w-full flex-col items-center gap-5 px-10 pt-20 md:pt-30 lg:pt-40 xl:h-full xl:pt-30"
-	>
+	<div class="z-10 flex h-full w-full flex-col items-center gap-5">
 		<div
-			class="flex h-full w-full flex-col items-center justify-around lg:gap-4 lg:px-12 xl:grid xl:max-w-7xl xl:grid-cols-6 xl:gap-6"
+			class="flex h-screen w-full flex-col items-center justify-center px-10 pt-25 md:pt-25 lg:h-full lg:gap-4 lg:px-12 lg:pt-25 xl:grid xl:max-w-7xl xl:grid-cols-6 xl:gap-6 xl:pt-30"
 		>
 			<!-- Kolom 1: Gambar tunggal -->
 			<div class="col-span-3 hidden h-full transition-all duration-700 xl:flex">
@@ -32,7 +30,7 @@
 			</div>
 
 			<!-- Kolom 2: Dua gambar bertumpuk -->
-			<div class="col-span-2 flex h-[90%] w-full items-center justify-center md:h-[70%] xl:h-full">
+			<div class="col-span-2 flex h-[80%] w-full md:h-[70%] xl:h-full">
 				<div class="flex h-full w-full flex-col-reverse gap-5 xl:flex-col">
 					<div
 						class="relative flex h-[80%] w-full items-center justify-center rounded-2xl bg-[url('./images/al-akbar.webp')] bg-[50%] p-10 shadow-xl xl:h-full"
@@ -59,18 +57,18 @@
 
 			<!-- Kolom 3: Bagian tombol -->
 			<div
-				class="flex h-[20%] w-full grid-cols-2 flex-row items-center justify-between text-center md:pt-10 xl:h-full xl:grid-cols-4 xl:flex-col xl:items-end xl:gap-2 xl:px-0 xl:pt-0"
+				class="flex h-[20%] w-full grid-cols-2 flex-row items-center justify-between text-center xl:h-full xl:grid-cols-4 xl:flex-col xl:items-end xl:gap-2 xl:px-0 xl:pt-0"
 			>
 				{#each menuItems as m}
 					<button
 						onclick={() => scrollToSection(m.id)}
-						class="text-secondary dark:text-primary dark:bg-secondary bg-primary flex aspect-square h-[60%] w-[24%] flex-col items-center justify-center rounded-2xl uppercase shadow-lg transition-transform duration-200 hover:scale-105 hover:cursor-pointer md:h-28 md:w-28 lg:h-33 lg:w-33 lg:rounded-3xl lg:p-3 xl:h-40 xl:w-40"
+						class="text-secondary dark:text-primary dark:bg-secondary bg-primary flex aspect-square h-[60%] w-[24%] flex-col items-center justify-center rounded-2xl uppercase shadow-lg transition-transform duration-200 hover:scale-105 hover:cursor-pointer md:h-[80%] lg:rounded-3xl lg:p-3 xl:h-40 xl:w-40"
 					>
 						<svelte:component
 							this={m.icon}
 							class="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 xl:h-16 xl:w-16"
 						/>
-						<p class="mt-1 w-full text-[6px] font-black lg:text-sm xl:text-base">
+						<p class="mt-1 w-full text-[6px] font-black md:text-sm lg:text-base">
 							{m.text}
 						</p>
 					</button>

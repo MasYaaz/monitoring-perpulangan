@@ -1,4 +1,4 @@
-import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Clock, House, MapPinned, NotebookPen, Users } from 'lucide-svelte';
 
 export const menuItems = [
@@ -34,14 +34,13 @@ export const navItems = [
 
 export const socialMedia = [
 	{
-		href: 'https://www.instagram.com/mas_yazz22/',
+		href: 'https://www.instagram.com/ikpmgontorsurabaya/',
 		aria: 'Instagram',
 		icon: faInstagram
 	},
 	{
-		href: 'https://www.linkedin.com/in/aflah-mahdi-yazdi-a69414355/',
-		aria: 'Linkedin',
-		icon: faLinkedin
-	},
-	{ href: 'https://github.com/MasYaaz', aria: 'Github', icon: faGithub }
+		href: 'https://web.facebook.com/ikpmsby/',
+		aria: 'Facebook',
+		icon: faFacebook
+	}
 ];

@@ -28,12 +28,12 @@
 	});
 </script>
 
-<div class="mt-2 flex w-full max-w-4xl flex-col justify-center gap-2 md:flex-row">
+<div class="z-10 mt-2 flex w-full max-w-4xl flex-col justify-center gap-2 md:flex-row">
 	<div class="flex w-full justify-between lg:w-[50%]">
 		<div class="relative w-[49%]">
 			<button
 				class="bg-primary dark:bg-secondary dark:text-primary text-secondary flex w-full cursor-pointer justify-between rounded-xl p-2 px-3 text-left font-[500]"
-				on:click={(e) => {
+				onclick={(e) => {
 					e.stopPropagation();
 					openPondok = !openPondok;
 					openKendaraan = false;
@@ -46,11 +46,11 @@
 
 			{#if openPondok}
 				<div
-					class="bg-primary dark:bg-secondary dark:text-primary text-secondary absolute left-0 z-10 mt-[10px] flex w-full flex-col rounded-lg shadow-lg"
+					class="bg-primary dark:bg-secondary dark:text-primary text-secondary absolute left-0 z-10 mt-[10px] flex w-full flex-col overflow-hidden rounded-lg font-semibold shadow-lg"
 				>
 					<button
-						class="cursor-pointer px-3 py-2 hover:bg-gray-100"
-						on:click={() => {
+						class="hover:bg-green cursor-pointer px-3 py-2 dark:hover:bg-gray-100"
+						onclick={() => {
 							$filterPondok = '';
 							openPondok = false;
 						}}
@@ -60,8 +60,8 @@
 
 					{#each $pondokList as p}
 						<button
-							class="cursor-pointer px-3 py-2 hover:bg-gray-100"
-							on:click={() => {
+							class="hover:bg-green cursor-pointer px-3 py-2 dark:hover:bg-gray-100"
+							onclick={() => {
 								$filterPondok = p;
 								openPondok = false;
 							}}
@@ -76,7 +76,7 @@
 		<div class="relative w-[49%]">
 			<button
 				class="bg-primary dark:bg-secondary dark:text-primary text-secondary flex w-full cursor-pointer justify-between rounded-xl p-2 px-3 text-left font-[500]"
-				on:click={(e) => {
+				onclick={(e) => {
 					e.stopPropagation();
 					openKendaraan = !openKendaraan;
 					openPondok = false;
@@ -89,11 +89,11 @@
 
 			{#if openKendaraan}
 				<div
-					class="bg-primary dark:bg-secondary dark:text-primary text-secondary absolute left-0 z-10 mt-[10px] flex w-full flex-col rounded-lg shadow-lg"
+					class="bg-primary dark:bg-secondary dark:text-primary text-secondary absolute left-0 z-10 mt-[10px] flex w-full flex-col overflow-hidden rounded-lg font-semibold shadow-lg"
 				>
 					<button
-						class="cursor-pointer px-3 py-2 hover:bg-gray-100"
-						on:click={() => {
+						class="hover:bg-green cursor-pointer px-3 py-2 dark:hover:bg-gray-100"
+						onclick={() => {
 							$filterKendaraan = '';
 							openKendaraan = false;
 						}}
@@ -103,8 +103,8 @@
 
 					{#each $kendaraanList as p}
 						<button
-							class="cursor-pointer px-3 py-2 hover:bg-gray-100"
-							on:click={() => {
+							class="hover:bg-green cursor-pointer px-3 py-2 dark:hover:bg-gray-100"
+							onclick={() => {
 								$filterKendaraan = p;
 								openKendaraan = false;
 							}}

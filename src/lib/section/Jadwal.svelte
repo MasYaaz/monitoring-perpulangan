@@ -4,10 +4,13 @@
 </script>
 
 <section
-	class="flex min-h-screen w-full flex-col items-center justify-center gap-8 px-10 md:pt-25 lg:pt-30"
+	class="relative flex min-h-screen w-full flex-col items-center justify-center gap-8 bg-[url('./images/bg3.webp')] bg-cover bg-center px-10 pt-20 md:pt-25 lg:pt-30"
 	id="section_4"
 >
-	<div class="flex h-full w-full flex-col items-center justify-between gap-2">
+	<div
+		class="from-secondary/100 via-secondary/60 to-secondary/100 dark:from-primary/100 dark:via-primary/70 dark:to-primary/100 absolute inset-0 z-0 bg-gradient-to-b"
+	></div>
+	<div class="z-10 flex h-full w-full flex-col items-center justify-between gap-2">
 		<div
 			class="dark:bg-secondary dark:text-primary bg-primary text-secondary dark:shadow-secondary rounded-3xl p-5 shadow-md/50"
 		>

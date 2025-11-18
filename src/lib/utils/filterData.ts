@@ -1,26 +1,30 @@
 import { writable, derived } from 'svelte/store';
-import { dataSantri } from '../data/santri';
+import { dataSantri } from '../store/dataSantri';
 
-// filter value (store)
+// filter value
 export const filterPondok = writable('');
 export const filterKendaraan = writable('');
 export const filterSearch = writable('');
 
-// untuk dropdown (unique)
-export const pondokList = writable([...new Set(dataSantri.map((d) => d.pondok))]);
+// dropdown list (unique)
+export const pondokList = derived(dataSantri, ($ds) => {
+	return [...new Set($ds.map((d) => d.pondok))];
+});
 
-export const kendaraanList = writable([...new Set(dataSantri.map((d) => d.kendaraan))]);
+export const kendaraanList = derived(dataSantri, ($ds) => {
+	return [...new Set($ds.map((d) => d.kendaraan))];
+});
 
-// hasil filter otomatis (derived store)
+// hasil filter otomatis (derived)
 export const filteredSantri = derived(
-	[filterPondok, filterKendaraan, filterSearch],
-	([$filterPondok, $filterKendaraan, $search]) => {
+	[dataSantri, filterPondok, filterKendaraan, filterSearch],
+	([$ds, $filterPondok, $filterKendaraan, $search]) => {
 		const s = $search.toLowerCase();
-		return dataSantri.filter((d) => {
+
+		return $ds.filter((d) => {
 			const matchPondok = $filterPondok ? d.pondok === $filterPondok : true;
 			const matchKendaraan = $filterKendaraan ? d.kendaraan === $filterKendaraan : true;
 
-			// search cek beberapa field
 			const matchSearch =
 				d.nama.toLowerCase().includes(s) ||
 				d.kelas.toLowerCase().includes(s) ||

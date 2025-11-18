@@ -5,7 +5,7 @@ export const dataSantri = writable<any[]>([]);
 
 // Auto-load CSV begitu store di-import di mana saja
 async function init() {
-	const res = await fetch('/src/lib/data/dataSantri.csv');
+	const res = await fetch('/data/dataSantri.csv');
 	const text = await res.text();
 	const parsed = parseCSV(text, ';');
 

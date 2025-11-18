@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { MapPinned } from 'lucide-svelte';
 	import PhotoGalery from '../component/photoGalery.svelte';
-	import Denah from '/images/Denah Al - Akbar.png';
+	import Denah from '/images/Denah Al - Akbar.webp';
 
 	const images = [{ src: Denah, title: 'Denah Masjid Al-Akbar' }];
 </script>

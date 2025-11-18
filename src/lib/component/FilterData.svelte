@@ -28,7 +28,7 @@
 	});
 </script>
 
-<div class="z-10 mt-2 flex w-full max-w-4xl flex-col justify-center gap-2 md:flex-row">
+<div class="z-20 mt-2 flex w-full max-w-4xl flex-col justify-center gap-2 md:flex-row">
 	<div class="flex w-full justify-between lg:w-[50%]">
 		<div class="relative w-[49%]">
 			<button

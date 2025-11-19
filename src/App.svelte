@@ -9,6 +9,7 @@
 	import { handleScroll } from './lib/utils/scrollHandler';
 	import Jadwal from './lib/section/Jadwal.svelte';
 	import DataSantri from './lib/section/DataSantri.svelte';
+	import { fade } from 'svelte/transition';
 
 	onMount(() => {
 		window.addEventListener('scroll', handleScroll);

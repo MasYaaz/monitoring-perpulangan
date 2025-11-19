@@ -12,34 +12,28 @@
 	<div class="z-10 flex w-full max-w-4xl flex-col items-center gap-10 dark:text-white">
 		<div class="flex w-full flex-col items-center justify-center gap-5">
 			<div
-				class="dark:bg-secondary dark:text-primary bg-primary text-secondary dark:shadow-secondary rounded-3xl p-5 shadow-md/50"
+				class="dark:bg-secondary dark:text-primary bg-primary text-secondary dark:shadow-secondary rounded-3xl p-5 shadow-md/50 transition-all duration-300 ease-in"
 			>
 				<NotebookPen class="h-20 w-20 lg:h-25 lg:w-25" />
 			</div>
 
-			<div>
-				<h2
-					class="font-heading text-center text-xl font-bold uppercase lg:text-3xl dark:text-white"
-				>
-					Prosedur & Tata Tertib
-				</h2>
-				<h2
-					class="font-heading -mt-1 text-center text-4xl font-black uppercase lg:text-5xl dark:text-white"
-				>
-					Penjemputan
-				</h2>
+			<div
+				class=" text-center font-bold uppercase transition-all duration-300 ease-in dark:text-white"
+			>
+				<h2 class="text-xl lg:text-3xl">Prosedur & Tata Tertib</h2>
+				<h2 class="-mt-1 text-4xl font-black lg:text-5xl">Penjemputan</h2>
 			</div>
 		</div>
 		<div class="mt-2 flex flex-col gap-5 lg:flex-row">
 			<div class="flex w-full flex-col items-center justify-around gap-3 text-justify text-sm">
 				<div
-					class="bg-primary dark:shadow-secondary dark:bg-secondary text-secondary dark:text-primary flex h-20 w-full flex-col justify-center rounded-2xl p-2 shadow-md/60"
+					class="bg-primary dark:shadow-secondary dark:bg-secondary text-secondary dark:text-primary flex h-20 w-full flex-col justify-center rounded-2xl p-2 shadow-md/60 transition-all duration-300 ease-in"
 				>
 					<h3 class="text-center text-xl font-bold uppercase lg:text-2xl">Prosedur Penjemputan</h3>
 					<h3 class="-mt-1 text-center text-base font-semibold lg:text-lg">Santri/Santriwati</h3>
 				</div>
 				<ol
-					class="bg-primary dark:shadow-secondary dark:bg-secondary text-secondary dark:text-primary flex h-full w-full list-decimal flex-col space-y-3 rounded-2xl p-10 font-[500] shadow-md/80 lg:p-15 lg:text-lg"
+					class="bg-primary dark:shadow-secondary dark:bg-secondary text-secondary dark:text-primary flex h-full w-full list-decimal flex-col space-y-3 rounded-2xl p-10 font-[500] shadow-md/80 transition-all duration-300 ease-in lg:p-15 lg:text-lg"
 				>
 					<li>Memasuki pintu masuk yang telah ditentukan.</li>
 					<li>Parkir di tempat yang telah ditentukan.</li>
@@ -53,12 +47,12 @@
 			</div>
 			<div class="flex w-full flex-col items-center gap-3 text-justify text-sm">
 				<h3
-					class="bg-primary dark:bg-secondary text-secondary dark:text-primary dark:shadow-secondary flex h-20 w-full items-center justify-center rounded-2xl p-2 text-center text-lg font-bold uppercase shadow-md/60 lg:text-xl"
+					class="bg-primary dark:bg-secondary text-secondary dark:text-primary dark:shadow-secondary flex h-20 w-full items-center justify-center rounded-2xl p-2 text-center text-lg font-bold uppercase shadow-md/60 transition-all duration-300 ease-in lg:text-xl"
 				>
 					Tata Tertib dan Himbauan
 				</h3>
 				<ol
-					class="bg-primary dark:shadow-secondary dark:bg-secondary text-secondary dark:text-primary flex h-full w-full list-decimal flex-col space-y-3 rounded-2xl p-10 font-[500] shadow-md/80 lg:p-12 lg:text-lg"
+					class="bg-primary dark:shadow-secondary dark:bg-secondary text-secondary dark:text-primary flex h-full w-full list-decimal flex-col space-y-3 rounded-2xl p-10 font-[500] shadow-md/80 transition-all duration-300 ease-in lg:p-12 lg:text-lg"
 				>
 					<li>Wajib memakai pakaian yang sopan dan menutup aurat.</li>
 					<li>Wajib memarkirkan kendaraan di tempat yang telah ditentukan.</li>

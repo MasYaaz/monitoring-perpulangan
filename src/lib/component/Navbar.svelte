@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade, fly, slide } from 'svelte/transition';
+	import { fly, slide } from 'svelte/transition';
 	import { showNavbar, toggleMenu, menuTerbuka, scrollToSection, halamanAktif } from '../store/ui';
 	import DarkmodeButton from './DarkmodeButton.svelte';
 	import { isDark } from '../store/darkMode';
@@ -11,7 +11,6 @@
 
 <header class="flex w-full justify-center">
 	<div
-		transition:fade={{ duration: 300 }}
 		class="bg-primary dark:bg-secondary dark:shadow-secondary fixed top-2 z-50 mt-2 flex h-12 w-[92%] justify-center rounded-md rounded-tr-xl rounded-bl-xl px-8 shadow-md/50 transition-all duration-200 ease-in md:h-16 md:w-[90%] md:px-12 lg:px-16 xl:h-20 xl:rounded-lg xl:rounded-tr-3xl xl:rounded-bl-3xl 2xl:top-4"
 	>
 		<div class="flex w-full justify-between">

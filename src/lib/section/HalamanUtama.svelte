@@ -36,7 +36,9 @@
 					<div
 						class="relative flex h-[80%] w-full items-center justify-center rounded-2xl bg-[url('./images/al-akbar.webp')] bg-[50%] p-10 shadow-xl xl:h-full"
 					>
-						<div class="bg-primary/90 dark:bg-secondary/90 absolute inset-0 z-0 rounded-2xl"></div>
+						<div
+							class="bg-primary/90 dark:bg-secondary/90 absolute inset-0 z-0 rounded-2xl transition-all duration-300 ease-in"
+						></div>
 						<img
 							src={logoSrc}
 							class="z-10 h-full w-fit lg:hidden xl:flex"
@@ -52,7 +54,7 @@
 						/>
 					</div>
 					<div
-						class="bg-primary dark:bg-secondary text-secondary dark:text-primary flex h-[20%] w-full flex-col items-center justify-center rounded-2xl p-3 px-4 text-center font-black uppercase md:p-5 md:px-10 xl:max-w-7xl"
+						class="bg-primary dark:bg-secondary text-secondary dark:text-primary flex h-[20%] w-full flex-col items-center justify-center rounded-2xl p-3 px-4 text-center font-black uppercase transition-all duration-300 ease-in md:p-5 md:px-10 xl:max-w-7xl"
 					>
 						<h1 class="text-xl leading-5 md:text-2xl lg:text-3xl lg:leading-tight xl:text-4xl">
 							Monitoring Perpulangan
@@ -69,7 +71,7 @@
 				{#each menuItems as m}
 					<button
 						onclick={() => scrollToSection(m.id)}
-						class="text-secondary dark:text-primary dark:bg-secondary bg-primary flex aspect-square h-[60%] w-[24%] flex-col items-center justify-center rounded-2xl uppercase shadow-lg transition-transform duration-200 hover:scale-105 hover:cursor-pointer md:h-[80%] lg:rounded-3xl lg:p-3 xl:h-40 xl:w-40"
+						class="text-secondary dark:text-primary dark:bg-secondary bg-primary flex aspect-square h-[60%] w-[24%] flex-col items-center justify-center rounded-2xl uppercase shadow-lg transition-all duration-200 ease-in hover:scale-105 hover:cursor-pointer md:h-[80%] lg:rounded-3xl lg:p-3 xl:h-40 xl:w-40"
 					>
 						<svelte:component
 							this={m.icon}

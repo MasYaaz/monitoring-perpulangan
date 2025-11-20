@@ -52,7 +52,7 @@
 					Tata Tertib dan Himbauan
 				</h3>
 				<ol
-					class="bg-primary dark:shadow-secondary dark:bg-secondary text-secondary dark:text-primary flex h-full w-full list-decimal flex-col space-y-3 rounded-2xl p-10 font-[500] shadow-md/80 transition-all duration-300 ease-in lg:p-12 lg:text-lg"
+					class="dark:bg-secondary bg-primary dark:shadow-secondary text-secondary dark:text-primary flex h-full w-full list-decimal flex-col space-y-3 rounded-2xl p-10 font-[500] shadow-md/80 transition-all duration-300 ease-in lg:p-12 lg:text-lg"
 				>
 					<li>Wajib memakai pakaian yang sopan dan menutup aurat.</li>
 					<li>Wajib memarkirkan kendaraan di tempat yang telah ditentukan.</li>

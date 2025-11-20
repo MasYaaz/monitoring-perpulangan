@@ -1,5 +1,5 @@
 <script>
-	import { ChevronDown, ChevronUp, Search } from 'lucide-svelte';
+	import { ChevronDown, Search } from 'lucide-svelte';
 	import {
 		filterKendaraan,
 		filterPondok,
@@ -9,6 +9,8 @@
 	} from '../utils/filterData';
 
 	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
 
 	let openPondok = false;
 	let openKendaraan = false;
@@ -42,12 +44,15 @@
 				}}
 			>
 				{$filterPondok || 'Pondok'}
-				{#if openPondok}<ChevronUp />
-				{:else}<ChevronDown />{/if}
+				<span class="transition-transform duration-300" class:rotate-180={openPondok}>
+					<ChevronDown />
+				</span>
 			</button>
 
 			{#if openPondok}
 				<div
+					in:fly={{ y: -10, opacity: 0, duration: 400, easing: cubicOut }}
+					out:fly={{ y: -10, opacity: 0, duration: 300 }}
 					class="bg-primary dark:bg-secondary dark:text-primary text-secondary absolute left-0 z-10 mt-[10px] flex w-full flex-col overflow-hidden rounded-lg font-semibold shadow-lg"
 				>
 					<button
@@ -85,12 +90,15 @@
 				}}
 			>
 				{$filterKendaraan || 'Kendaraan'}
-				{#if openKendaraan}<ChevronUp />
-				{:else}<ChevronDown />{/if}
+				<span class="transition-transform duration-300" class:rotate-180={openKendaraan}>
+					<ChevronDown />
+				</span>
 			</button>
 
 			{#if openKendaraan}
 				<div
+					in:fly={{ y: -10, opacity: 0, duration: 400, easing: cubicOut }}
+					out:fly={{ y: -10, opacity: 0, duration: 300 }}
 					class="bg-primary dark:bg-secondary dark:text-primary text-secondary absolute left-0 z-10 mt-[10px] flex w-full flex-col overflow-hidden rounded-lg font-semibold shadow-lg transition-all duration-300 ease-in"
 				>
 					<button

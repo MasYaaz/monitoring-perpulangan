@@ -10,28 +10,21 @@
 </script>
 
 <header class="flex w-full justify-center">
-	<div
-		class="bg-primary dark:bg-secondary dark:shadow-secondary fixed top-2 z-50 mt-2 flex h-12 w-[92%] justify-center rounded-md rounded-tr-xl rounded-bl-xl px-8 shadow-md/50 transition-all duration-200 ease-in md:h-16 md:w-[90%] md:px-12 lg:px-16 xl:h-20 xl:rounded-lg xl:rounded-tr-3xl xl:rounded-bl-3xl 2xl:top-4"
+	<nav
+		class="bg-primary/90 dark:bg-secondary/90 dark:shadow-secondary fixed top-2 z-50 mt-2 flex w-[95%] justify-between rounded-full p-3 px-8 shadow-md/50 backdrop-blur-md transition-all duration-200 ease-in md:mt-3 md:w-[95%] md:px-12 lg:px-16"
 	>
-		<div class="flex w-full justify-between">
-			<!-- Logo -->
-			<div class="flex basis-1/3 items-center">
-				<img
-					src={logoSrc}
-					alt="logo"
-					width="187"
-					height="187"
-					class="w-18 md:w-26 md:p-2 lg:w-34"
-					loading="eager"
-				/>
-			</div>
+		<!-- Logo -->
+		<div class="flex w-[30%] items-center">
+			<img src={logoSrc} alt="logo" class="h-auto w-24 md:w-26 md:p-2 lg:w-34" loading="eager" />
+		</div>
 
-			<!-- Desktop Nav -->
+		<!-- Desktop Nav -->
+		<div class="flex w-[25%] justify-end gap-4">
 			{#if $showNavbar}
-				<nav
+				<div
 					in:fly={{ x: 50, opacity: 0, duration: 400, easing: cubicOut }}
 					out:fly={{ x: -50, opacity: 0, duration: 300 }}
-					class="hidden basis-2/3 items-center justify-end p-2 transition-transform duration-500 ease-out lg:flex"
+					class="hidden items-center transition-transform duration-500 ease-out lg:flex"
 				>
 					{#if !$isDark}
 						{#each navItems as item}
@@ -61,10 +54,9 @@
 							</button>
 						{/each}
 					{/if}
-				</nav>
+				</div>
 			{/if}
-
-			<div class="flex h-full gap-2">
+			<div class="flex h-full items-center gap-2">
 				<DarkmodeButton />
 				<!-- Hamburger -->
 				<button class="lg:hidden" onclick={toggleMenu} aria-label="tombol navbar">
@@ -83,26 +75,25 @@
 					</svg>
 				</button>
 			</div>
-
-			<!-- Mobile Menu -->
-			{#if $menuTerbuka}
-				<nav
-					transition:slide={{ duration: 400 }}
-					class="fixed inset-0 z-40 flex h-screen flex-col items-center justify-center gap-2 bg-gray-900/50 backdrop-blur-sm md:gap-4 lg:hidden"
-				>
-					{#each navItems as item}
-						<button
-							onclick={() => scrollToSection(item.id)}
-							aria-label={item.aria}
-							class="bg-primary/20 flex w-[90%] items-center justify-center gap-2 rounded-4xl p-8 text-xl font-semibold tracking-wide text-white uppercase"
-						>
-							<svelte:component this={item.icon} size="25" />
-							{item.aria}
-						</button>
-					{/each}
-					<img src="./dark-theme.svg" alt="logo satgas" class="h-15 w-auto pt-5 md:h-25" />
-				</nav>
-			{/if}
 		</div>
-	</div>
+		<!-- Mobile Menu -->
+		{#if $menuTerbuka}
+			<div
+				transition:slide={{ duration: 400 }}
+				class="fixed inset-0 z-40 flex h-screen flex-col items-center justify-center gap-2 bg-gray-900/50 backdrop-blur-sm md:gap-4 lg:hidden"
+			>
+				{#each navItems as item}
+					<button
+						onclick={() => scrollToSection(item.id)}
+						aria-label={item.aria}
+						class="bg-primary/20 flex w-[90%] items-center justify-center gap-2 rounded-4xl p-8 text-xl font-semibold tracking-wide text-white uppercase"
+					>
+						<svelte:component this={item.icon} size="25" />
+						{item.aria}
+					</button>
+				{/each}
+				<img src="./dark-theme.svg" alt="logo satgas" class="h-15 w-auto pt-5 md:h-25" />
+			</div>
+		{/if}
+	</nav>
 </header>

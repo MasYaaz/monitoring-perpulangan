@@ -17,8 +17,8 @@
 	class="text-secondary dark:text-primary transition-all duration-300 hover:scale-110 hover:cursor-pointer 2xl:mb-1"
 >
 	{#if dark}
-		<Moon class="h-5 w-5 lg:h-8 lg:w-8" />
+		<Moon class="h-5 w-5 lg:h-7 lg:w-7" />
 	{:else}
-		<Sun class="h-5 w-5 lg:h-8 lg:w-8" />
+		<Sun class="h-5 w-5 lg:h-7 lg:w-7" />
 	{/if}
 </button>

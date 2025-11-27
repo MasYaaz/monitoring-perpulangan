@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { parseCSV } from './parseCSV';
+import { parseCSV } from '../utils/parseCSV';
 
 export const dataSantri = writable<any[]>([]);
 

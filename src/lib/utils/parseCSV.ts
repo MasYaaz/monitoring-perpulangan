@@ -1,4 +1,4 @@
-import { dataSantri } from './dataSantri';
+import { dataSantri } from '../store/dataSantri';
 
 // Parse CSV
 export function parseCSV(csv: string, delimiter = ';') {

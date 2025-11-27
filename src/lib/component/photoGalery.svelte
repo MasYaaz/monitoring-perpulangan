@@ -25,7 +25,7 @@
 	});
 </script>
 
-<div>
+<div class="z-10">
 	{#each images as img}
 		<a href={img.src} class="glightbox">
 			<img

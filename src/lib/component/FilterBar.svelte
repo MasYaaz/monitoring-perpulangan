@@ -3,21 +3,18 @@
 	import { onMount } from 'svelte';
 	import FilterDropdown from './FilterBar/FilterDropdown.svelte';
 	import SearchInput from './FilterBar/SearchInput.svelte';
+	import { activeDropdown } from '../store/dropDown';
+	import { setupGlobalDropdownCloser } from '../utils/setupGlobalDropdownCloser';
 
-	let openPondok = false;
-	let openKendaraan = false;
+	let cleanup: any;
 
-	// tutup dropdown ketika klik di luar
-	function handleClickOutside(event) {
-		if (!event.target.closest('.dropdown')) {
-			openPondok = false;
-			openKendaraan = false;
-		}
+	function toggleDropdown(name: string) {
+		activeDropdown.update((curr) => (curr === name ? null : name));
 	}
 
 	onMount(() => {
-		window.addEventListener('click', handleClickOutside);
-		return () => window.removeEventListener('click', handleClickOutside);
+		cleanup = setupGlobalDropdownCloser();
+		return () => cleanup();
 	});
 </script>
 
@@ -29,22 +26,16 @@
 			label="Pondok"
 			items={$pondokList}
 			bind:value={$filterPondok}
-			open={openPondok}
-			toggle={() => {
-				openPondok = !openPondok;
-				openKendaraan = false;
-			}}
+			open={$activeDropdown === 'pondok'}
+			toggle={() => toggleDropdown('pondok')}
 		/>
 
 		<FilterDropdown
 			label="Kendaraan"
 			items={$kendaraanList}
 			bind:value={$filterKendaraan}
-			open={openKendaraan}
-			toggle={() => {
-				openKendaraan = !openKendaraan;
-				openPondok = false;
-			}}
+			open={$activeDropdown === 'kendaraan'}
+			toggle={() => toggleDropdown('kendaraan')}
 		/>
 	</div>
 

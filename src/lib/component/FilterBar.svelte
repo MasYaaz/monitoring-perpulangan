@@ -25,17 +25,25 @@
 		<FilterDropdown
 			label="Pondok"
 			items={$pondokList}
-			bind:value={$filterPondok}
+			value={$filterPondok}
 			open={$activeDropdown === 'pondok'}
 			toggle={() => toggleDropdown('pondok')}
+			onSelect={(v) => {
+				$filterPondok = v;
+				toggleDropdown('pondok');
+			}}
 		/>
 
 		<FilterDropdown
 			label="Kendaraan"
-			items={$kendaraanList}
-			bind:value={$filterKendaraan}
+			items={$pondokList}
+			value={$filterPondok}
 			open={$activeDropdown === 'kendaraan'}
 			toggle={() => toggleDropdown('kendaraan')}
+			onSelect={(v) => {
+				$filterPondok = v;
+				toggleDropdown('kendaraan');
+			}}
 		/>
 	</div>
 

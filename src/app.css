@@ -57,3 +57,16 @@ html.dark ::-webkit-scrollbar-thumb {
 html.dark ::-webkit-scrollbar-thumb:hover {
 	background-color: #fefae0;
 }
+
+/* ==========================================================
+   SCROLLBAR: HIDDEN
+   ========================================================== */
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.no-scrollbar {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}

@@ -18,7 +18,7 @@
 			</thead>
 		</table>
 		<div
-			class="max-h-[380px] w-full overflow-y-auto md:max-h-[420px] lg:max-h-[480px] xl:max-h-[580px]"
+			class="no-scrollbar max-h-[380px] w-full overflow-y-auto md:max-h-[420px] lg:max-h-[480px] xl:max-h-[580px]"
 		>
 			<table class="w-full table-fixed text-sm">
 				<tbody class="text-primary bg-gray-100 text-xs font-semibold lg:text-base">

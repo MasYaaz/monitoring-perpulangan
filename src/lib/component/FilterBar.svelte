@@ -36,12 +36,12 @@
 
 		<FilterDropdown
 			label="Kendaraan"
-			items={$pondokList}
-			value={$filterPondok}
+			items={$kendaraanList}
+			value={$filterKendaraan}
 			open={$activeDropdown === 'kendaraan'}
 			toggle={() => toggleDropdown('kendaraan')}
 			onSelect={(v) => {
-				$filterPondok = v;
+				$filterKendaraan = v;
 				toggleDropdown('kendaraan');
 			}}
 		/>

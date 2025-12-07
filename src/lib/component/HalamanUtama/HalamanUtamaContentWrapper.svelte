@@ -6,7 +6,7 @@
 
 <div class="z-10 flex h-screen w-full flex-col items-center gap-5 xl:h-full">
 	<div
-		class="flex h-full w-full flex-col items-center justify-center px-10 pt-25 md:pt-25 lg:h-full lg:max-w-3xl lg:gap-4 lg:pt-25 xl:grid xl:max-w-7xl xl:grid-cols-6 xl:gap-6 xl:pt-30"
+		class="flex h-full w-full flex-col items-center justify-center px-5 pt-25 md:max-w-3xl md:px-10 md:pt-25 lg:h-full lg:gap-4 lg:pt-25 xl:grid xl:max-w-7xl xl:grid-cols-6 xl:gap-6 xl:pt-30"
 	>
 		<!-- Kolom 1: Gambar tunggal -->
 		<PictureContent1 />

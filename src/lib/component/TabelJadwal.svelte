@@ -2,7 +2,9 @@
 	import { jadwalSemua } from '../data/jadwal';
 </script>
 
-<div class="z-10 flex w-full max-w-4xl flex-col gap-5 lg:gap-10">
+<div
+	class="z-10 flex w-full max-w-lg flex-col gap-5 px-5 md:max-w-3xl md:px-10 lg:max-w-4xl lg:gap-10"
+>
 	{#each jadwalSemua as j}
 		<div class="flex flex-col gap-2">
 			<div>

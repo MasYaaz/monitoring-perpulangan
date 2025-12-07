@@ -18,7 +18,7 @@
 	];
 </script>
 
-<div class="z-30 mt-2 flex max-w-4xl flex-col gap-5 lg:flex-row">
+<div class="z-20 mt-2 flex max-w-lg flex-col gap-5 px-5 md:max-w-2xl lg:max-w-4xl lg:flex-row">
 	<div class="flex w-full flex-col items-center justify-around gap-3 text-justify text-sm">
 		<div
 			class="bg-primary dark:shadow-secondary dark:bg-secondary text-secondary dark:text-primary flex h-20 w-full flex-col justify-center rounded-2xl p-2 shadow-md/60 transition-all duration-300 ease-in"

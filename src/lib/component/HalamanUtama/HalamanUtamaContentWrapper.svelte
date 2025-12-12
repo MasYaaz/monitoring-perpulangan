@@ -1,22 +1,37 @@
 <script>
+	import { isDark } from '../../store/darkMode';
 	import ButtonWrapper from './ButtonWrapper.svelte';
-	import PictureContent1 from './PictureContent1.svelte';
-	import PictureContent2 from './PictureContent2.svelte';
 </script>
 
-<div
-	class="z-10 flex h-screen w-full flex-col items-center pt-25 md:pt-25 lg:h-full lg:pt-25 xl:pt-30"
->
+<div class="z-10 flex h-screen min-h-screen w-full max-w-5xl pt-25 md:pt-25 lg:pt-25 xl:pt-30">
 	<div
-		class="flex h-full w-full max-w-md flex-col items-center justify-center px-5 md:max-w-3xl md:gap-5 md:px-10 lg:max-w-4xl lg:gap-4 xl:grid xl:max-w-7xl xl:grid-cols-6 xl:gap-6"
+		class="dark:text-secondary text-primary flex h-full w-full flex-col items-start justify-between p-6 md:items-center md:p-10 lg:items-center"
 	>
-		<!-- Kolom 1: Gambar tunggal -->
-		<PictureContent1 />
+		<div class="flex w-full flex-col items-start md:items-center">
+			<div class="relative flex h-40 w-full items-center md:justify-center lg:h-20">
+				<img
+					src="./logo-light.svg"
+					class="absolute h-full transition-opacity duration-500 ease-in-out
+                    {$isDark ? 'opacity-0' : 'opacity-100'}"
+					loading="eager"
+					fetchpriority="high"
+					alt="Logo Light"
+				/>
 
-		<!-- Kolom 2: Dua gambar bertumpuk -->
-		<PictureContent2 />
+				<img
+					src="./logo-dark.svg"
+					class="absolute h-full transition-opacity duration-500 ease-in-out
+                    {$isDark ? 'opacity-100' : 'opacity-0'}"
+					loading="eager"
+					fetchpriority="high"
+					alt="Logo Dark"
+				/>
+			</div>
 
-		<!-- Kolom 3: Bagian tombol -->
+			<h1 class="mt-4 text-4xl font-black uppercase lg:text-6xl">Informasi Perpulangan</h1>
+			<h1 class="font-black uppercase lg:text-2xl">Satuan Tugas IKPM Surabaya</h1>
+		</div>
+
 		<ButtonWrapper />
 	</div>
 </div>

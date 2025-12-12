@@ -2,7 +2,9 @@
 	import { filteredSantri } from '../utils/filterData';
 </script>
 
-<div class="z-10 mb-10 flex w-full max-w-lg flex-col gap-5 px-5 md:max-w-2xl lg:max-w-4xl">
+<div
+	class="z-10 mb-10 flex w-full max-w-lg flex-col gap-5 px-5 md:max-w-2xl md:px-0 lg:max-w-4xl lg:px-10"
+>
 	<div class=" dark:shadow-secondary w-full overflow-hidden rounded-2xl shadow-md/30">
 		<table class="w-full table-fixed">
 			<thead

@@ -19,7 +19,7 @@
 </script>
 
 <div
-	class="z-20 mt-2 flex w-full max-w-lg flex-col justify-center gap-2 px-5 text-xs md:max-w-2xl md:text-sm lg:max-w-4xl lg:flex-row lg:text-base"
+	class="z-20 mt-2 flex w-full max-w-lg flex-col justify-center gap-2 px-5 text-xs md:max-w-3xl md:px-12 md:text-sm lg:max-w-4xl lg:flex-row lg:px-10 lg:text-base"
 >
 	<div class="flex w-full justify-between gap-2 lg:w-[50%]">
 		<FilterDropdown

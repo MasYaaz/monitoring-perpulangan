@@ -8,14 +8,14 @@
 <!-- Mobile Menu -->
 {#if $menuTerbuka}
 	<div
-		transition:slide={{ duration: 400 }}
+		transition:slide={{ duration: 500 }}
 		class="fixed inset-0 z-40 flex h-screen w-screen flex-col items-center justify-around bg-gray-900/50 py-18 backdrop-blur-sm lg:hidden"
 	>
 		{#each navItems as item}
 			<button
 				onclick={() => scrollToSection(item.id)}
 				aria-label={item.aria}
-				class="bg-primary/20 flex w-[80%] items-center justify-center gap-2 rounded-full p-5 text-xl font-semibold tracking-wide text-white uppercase md:p-8"
+				class="flex w-[80%] items-center justify-center gap-2 rounded-2xl p-5 text-xl font-semibold tracking-wide text-white uppercase shadow-lg md:p-8"
 			>
 				<svelte:component this={item.icon} size="25" />
 				{item.aria}

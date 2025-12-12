@@ -4,7 +4,9 @@
 
 <footer class="relative flex w-full justify-center overflow-hidden pt-20">
 	<!-- Background Image -->
-	<div class="absolute inset-0 z-0 bg-[url('./images/back.webp')] bg-cover bg-center"></div>
+	<div
+		class="absolute inset-0 z-0 bg-[url('./images/foto-alakbar2.webp')] bg-cover bg-bottom dark:bg-[url('./images/foto-alakbar2.webp')]"
+	></div>
 
 	<!-- Overlay Transparan -->
 	<div

@@ -23,8 +23,4 @@
 			Tlp. (031) 350 3502 || Wabsite: www.ikpmsby.org
 		</p>
 	</div>
-	<div class="flex w-full flex-col items-center md:hidden">
-		<hr class="border-primary dark:border-secondary my-1 w-[80%] border-[2px] md:hidden" />
-		<hr class="border-primary dark:border-secondary w-[70%] border-[0.5px] md:hidden" />
-	</div>
 </div>

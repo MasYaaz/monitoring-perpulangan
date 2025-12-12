@@ -8,7 +8,7 @@
 		class="dark:text-secondary text-primary flex h-full w-full flex-col items-start justify-between p-6 md:items-center md:p-10 lg:items-center"
 	>
 		<div class="flex w-full flex-col items-start md:items-center">
-			<div class="relative flex h-40 w-full items-center md:justify-center lg:h-20">
+			<div class="relative flex h-40 w-full items-center md:h-20 md:justify-center">
 				<img
 					src="./logo-light.svg"
 					class="absolute h-full transition-opacity duration-500 ease-in-out

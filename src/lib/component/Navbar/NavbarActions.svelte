@@ -1,6 +1,6 @@
 <script>
 	import { isDark } from '../../store/darkMode';
-	import { toggleMenu } from '../../store/ui';
+	import { toggleMenu } from '../../utils/toggleMenu';
 	import DarkmodeButton from '../DarkmodeButton.svelte';
 </script>
 

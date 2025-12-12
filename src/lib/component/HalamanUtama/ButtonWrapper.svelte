@@ -32,7 +32,7 @@
 	{#each menuItems as m}
 		<button
 			onclick={() => scrollToSection(m.id)}
-			class="text-secondary dark:text-primary dark:bg-secondary bg-primary flex aspect-square h-[60%] w-[24%] flex-col items-center justify-center rounded-2xl p-1 uppercase shadow-lg transition-all duration-200 ease-in hover:scale-105 hover:cursor-pointer md:h-[80%] lg:rounded-3xl lg:p-3 xl:h-40 xl:w-40"
+			class="text-secondary dark:text-primary dark:bg-secondary bg-primary flex aspect-square h-[60%] w-[24%] flex-col items-center justify-center rounded-2xl p-1 uppercase shadow-lg transition-all duration-200 ease-in md:h-[80%] lg:rounded-3xl lg:p-3 lg:hover:scale-105 lg:hover:cursor-pointer xl:h-40 xl:w-40"
 		>
 			<svelte:component
 				this={m.icon}

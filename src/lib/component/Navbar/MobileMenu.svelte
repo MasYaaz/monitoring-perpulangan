@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import { menuTerbuka, scrollToSection } from '../../store/ui';
+	import { menuTerbuka } from '../../store/ui';
 	import { navItems } from '../../store/array';
+	import { scrollToSection } from '../../utils/scrollTo';
 </script>
 
 <!-- Mobile Menu -->

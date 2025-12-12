@@ -3,7 +3,7 @@
 </script>
 
 <section
-	class="relative flex min-h-screen w-full flex-col items-center justify-center gap-5 bg-[url('./images/back.webp')] bg-cover"
+	class="relative flex h-full min-h-screen w-full flex-col items-center justify-center gap-5 bg-[url('./images/back.webp')] bg-cover"
 	id="section_1"
 >
 	<!-- Background -->

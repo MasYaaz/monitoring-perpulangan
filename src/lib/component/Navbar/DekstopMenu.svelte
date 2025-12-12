@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { navItems } from '../../store/array';
-	import { scrollToSection, halamanAktif } from '../../store/ui';
+	import { halamanAktif } from '../../store/ui';
+	import { scrollToSection } from '../../utils/scrollTo';
 </script>
 
 <div class="hidden items-center transition-transform duration-500 ease-out lg:flex">

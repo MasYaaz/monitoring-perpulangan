@@ -16,7 +16,7 @@
 	];
 </script>
 
-<div class="flex flex-col lg:items-end">
+<div class="flex flex-col items-center md:items-start lg:items-end">
 	<h3 class="text-dark mb-2 text-xl font-semibold">Our Media</h3>
 	<div class="flex space-x-4">
 		{#each socialMedia as s}

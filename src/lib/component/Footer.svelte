@@ -2,7 +2,7 @@
 	import FooterContent from './Footer/FooterContent.svelte';
 </script>
 
-<footer class="relative w-full overflow-hidden pt-20">
+<footer class="relative flex w-full justify-center overflow-hidden pt-20">
 	<!-- Background Image -->
 	<div class="absolute inset-0 z-0 bg-[url('./images/back.webp')] bg-cover bg-center"></div>
 

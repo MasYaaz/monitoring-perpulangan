@@ -1,3 +1,7 @@
+/**
+ * Store array berisi jadwal dari setiap pondok dan dipisahkan
+ * antara gontor putra & putri
+ */
 export const jadwal = {
 	perpulangan: {
 		jadwalKampusPutra: [
@@ -30,6 +34,11 @@ export const jadwal = {
 	}
 };
 
+/**
+ * Store array untuk menggabungkan semua array yang ada di jadwal
+ *
+ * Digunakan untuk buat objek each di jadwal pondok
+ */
 export const jadwalSemua = [
 	{
 		title: 'Gontor Putri',

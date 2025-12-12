@@ -1,5 +1,8 @@
 import { Clock, House, MapPinned, NotebookPen, Users } from 'lucide-svelte';
 
+/**
+ * Store array yang digunakan untuk tombol pindah berdasarkan section
+ */
 export const navItems = [
 	{ id: 'section_1', icon: House, aria: 'Halaman Utama' },
 	{ id: 'section_2', icon: MapPinned, aria: 'Denah' },

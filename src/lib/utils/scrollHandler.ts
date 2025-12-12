@@ -1,6 +1,20 @@
-import { halamanAktif, menuTerbuka, showNavbar } from '../store/ui';
+import { halamanAktif, menuTerbuka } from '../store/ui';
 import { get } from 'svelte/store';
 
+/**
+ * Menangani event scroll pada window untuk memperbarui state UI secara real-time.
+ *
+ * Fungsi ini melakukan kalkulasi posisi scroll pengguna untuk:
+ * 1. Menentukan section mana yang sedang dilihat (`halamanAktif`).
+ * 2. Mengatur visibilitas navbar (sembunyi di section awal, tampil di section berikutnya).
+ * 3. Menutup menu navigasi (mobile) secara otomatis saat pengguna menggulir.
+ *
+ * @remarks
+ * - Menggunakan `offset` 100px agar perubahan status aktif terasa lebih responsif (sedikit sebelum elemen menyentuh atas layar).
+ * - Memiliki logika khusus untuk mendeteksi jika pengguna sudah mencapai dasar halaman (`bottom of page`).
+ *
+ * @returns {void} Tidak mengembalikan nilai, tetapi memicu update pada Svelte store.
+ */
 export function handleScroll() {
 	const offset = 100;
 	const posisi = window.scrollY + offset;
@@ -25,10 +39,7 @@ export function handleScroll() {
 	// Update store halaman aktif
 	halamanAktif.set(posisiAktif);
 
-	// Tampilkan navbar hanya setelah user scroll melewati sedikit
-	showNavbar.set(posisiAktif !== 'section_1'); // nilai bisa disesuaikan (misal 50px)
-
-	// Tutup menu jika sedang terbuka saat scroll
+	// Tutup menu jika sedang terbuka saat scroll (UX improvement)
 	if (get(menuTerbuka)) {
 		menuTerbuka.set(false);
 	}

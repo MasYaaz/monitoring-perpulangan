@@ -1,6 +1,16 @@
 import { dataSantri } from '../store/dataSantri';
 
-// Parse CSV
+/**
+ * Mengubah string format CSV mentah menjadi array objek JavaScript.
+ * Baris pertama dari CSV dianggap sebagai header (kunci objek).
+ * * @param {string} csv - String mentah yang berisi seluruh konten file CSV.
+ * @param {string} [delimiter=';'] - Karakter pemisah antar kolom (default: titik koma).
+ * @returns {Record<string, string>[]} Array objek di mana key adalah header dan value adalah data sel.
+ * @example
+ * const raw = "Nama;Kelas\nBudi;1A\nSiti;1B";
+ * const data = parseCSV(raw);
+ * // Hasil: [{ Nama: "Budi", Kelas: "1A" }, { Nama: "Siti", Kelas: "1B" }]
+ */
 export function parseCSV(csv: string, delimiter = ';') {
 	const lines = csv.trim().split('\n');
 	if (lines.length === 0) return [];
@@ -22,7 +32,16 @@ export function parseCSV(csv: string, delimiter = ';') {
 	return result;
 }
 
-// Load CSV + simpan ke store
+/**
+ * Mengambil file CSV dari URL/path, melakukan parsing, dan menyimpan hasilnya ke Svelte store `dataSantri`.
+ * * @async
+ * @param {string} path - URL atau path relatif menuju file CSV.
+ * @param {string} [delimiter=';'] - Karakter pemisah antar kolom (default: titik koma).
+ * @returns {Promise<Record<string, string>[]>} Promise yang me-resolve array data yang sudah diparsing.
+ * @example
+ * // Di dalam onMount atau fungsi async
+ * await loadCSV('/data/santri.csv');
+ */
 export async function loadCSV(path: string, delimiter = ';') {
 	const res = await fetch(path);
 	const text = await res.text();

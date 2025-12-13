@@ -1,25 +1,35 @@
-# Website Informasi Perpulangan - Arus Balik Konsulat Surabaya
+# Website Pusat Informasi Satgas IKPM Surabaya
 
 ![Foto](public/thumbnail.webp)
 
-Selamat Datang di Dokumentasi Web Portofolio kedua saya.
-Ini merupakan web portofolio kedua yang telah saya buat dengan menggunakan framework Vite + Svelte dan Tailwind CSS.
+Selamat Datang di Dokumentasi Website Pusat Informasi Satgas IKPM Surabaya. Web ini adalah tempat seluruh informasi terkait perpulangan dan arus balik santri PMDG ditampilkan dengan konsep yang simpel dan mudah dipahami dengan baik. Disajikan dengan UI yang rapi dan responsif di semua perangkat baik itu di pc maupun di mobile. Fokus utama dari dibuatnya website ini adalah untuk memudahkan para walisantri dalam mengakses informasi dengan mudah dan cepat.
 
-## Framework yang digunakan
+## Framework dan Library yang digunakan
 
-[![My Skills](https://skillicons.dev/icons?i=tailwindcss,svelte,vite)]()
+- Dalam Project ini saya menggunakan Svelte & Vite sebagai framework frontend. Saya menggunakan kedua framework ini karena
+framework ini ringan dan cara penggunaan cukup simpel.
 
-[![Tailwind CSS](https://img.shields.io/badge/tailwindcss-563D7C?style=for-the-badge&logo=tailwindcss&logoColor=white)]() [![Svelte](https://img.shields.io/badge/Svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white)]() [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=fff)]()
+  [![Framework was used](https://skillicons.dev/icons?i=svelte,vite)]()
+
+  [![Svelte](https://img.shields.io/badge/Svelte-%23f1413d?style=for-the-badge&logo=svelte&logoColor=white)]() [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=fff)]()
+
+- Untuk styling tampilan saya menggunakan tailwind css. Library ui css berbasis class yang ringan dan mudah penggunaannya
+
+  [![Framework was used](https://skillicons.dev/icons?i=tailwindcss)]()
+
+  [![Svelte](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)]()
 
 ## Bahasa Pemrograman Yang di Gunakan
 
-[![Bahasa Pemrograman](https://skillicons.dev/icons?i=html,css,ts)]()
+- Untuk bahasa pemrograman yang saya pakai adalah Typescript. Dan untuk Penyusun UI serta Styling tampilannya saya memakai css dan html.
+  
+  [![Bahasa Pemrograman](https://skillicons.dev/icons?i=ts,css,html)]()
 
-[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]() [![CSS](https://img.shields.io/badge/CSS-639?style=for-the-badge&logo=css&logoColor=fff)]() [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=fff)]() 
+  [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=fff)]() [![CSS](https://img.shields.io/badge/CSS-639?style=for-the-badge&logo=css&logoColor=fff)]() [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
 
-## Overview Web Ini
+## Overview Web
 
-Web ini adalah web portofolio yang didalamnya terdapat pengenalan tentang diri saya dan juga data diri serta kontak saya.
+Web ini adalah 
 
 ![Foto](docs/Foto-web2.png)
 

@@ -1,47 +1,86 @@
-# Website Pusat Informasi Satgas IKPM Surabaya
+# Informasi Proyek — Monitoring Perpulangan (SATGAS IKPM Surabaya)
 
 ![Foto](public/thumbnail.webp)
 
-Selamat Datang di Dokumentasi Website Pusat Informasi Satgas IKPM Surabaya. Web ini adalah tempat seluruh informasi terkait perpulangan dan arus balik santri PMDG ditampilkan dengan konsep yang simpel dan mudah dipahami dengan baik. Disajikan dengan UI yang rapi dan responsif di semua perangkat baik itu di pc maupun di mobile. Fokus utama dari dibuatnya website ini adalah untuk memudahkan para walisantri dalam mengakses informasi dengan mudah dan cepat.
+Selamat Datang di Dokumentasi Website Pusat Informasi Satgas IKPM Surabaya. Web ini menampilkan informasi perpulangan dan arus balik santri (jadwal, denah, tata tertib, dan data santri) dengan UI yang sederhana, responsif, dan mudah digunakan oleh wali santri.
 
-## Framework dan Library yang digunakan
+## Fitur Utama
 
-- Dalam Project ini saya menggunakan Svelte & Vite sebagai framework frontend. Saya menggunakan kedua framework ini karena
-framework ini ringan dan cara penggunaan cukup simpel.
+- Halaman Utama, Denah, Tata Tertib, Jadwal Kedatangan, dan Data Santri.
+- Filter Data Santri berdasarkan Pondok, Kendaraan, dan pencarian teks.
+- Gallery denah dengan zoom (GLightbox).
+- Dark mode tersimpan di `localStorage`.
+- Data santri dimuat otomatis dari CSV publik di `public/data/dataSantri.csv`.
 
-  [![Framework was used](https://skillicons.dev/icons?i=svelte,vite)]()
+## Teknologi & Library
 
-  [![Svelte](https://img.shields.io/badge/Svelte-%23f1413d?style=for-the-badge&logo=svelte&logoColor=white)]() [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=fff)]()
+- Svelte + Vite
+- Tailwind CSS
+- GLightbox (galeri)
+- FontAwesome, Lucide
+- TypeScript, CSS, HTML
 
-- Untuk styling tampilan saya menggunakan tailwind css. Library ui css berbasis class yang ringan dan mudah penggunaannya
+## Menjalankan & Build
 
-  [![Framework was used](https://skillicons.dev/icons?i=tailwindcss)]()
+1. Install dependencies:
 
-  [![Svelte](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)]()
+```sh
+npm install
+```
 
-## Bahasa Pemrograman Yang di Gunakan
+2. Jalankan development server:
 
-- Untuk bahasa pemrograman yang saya pakai adalah Typescript. Dan untuk Penyusun UI serta Styling tampilannya saya memakai css dan html.
-  
-  [![Bahasa Pemrograman](https://skillicons.dev/icons?i=ts,css,html)]()
+```sh
+npm run dev
+```
 
-  [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=fff)]() [![CSS](https://img.shields.io/badge/CSS-639?style=for-the-badge&logo=css&logoColor=fff)]() [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
+3. Build produksi:
 
-## Overview Web
+```sh
+npm run build
+```
 
-Web ini adalah 
+4. Preview build:
 
-![Foto](docs/Foto-web2.png)
+```sh
+npm run preview
+```
 
-Selain itu, web ini juga menjabarkan tentang kemampuan - kemampuan yang saya miliki baik itu pemrograman web, desain grafis dan juga fotografi.Di sini
-juga ada link untuk mencari tahu tentang portofolio saya baik itu di Github ataupun Shutterstock.
+(Lihat script di [package.json](package.json))
 
-![Foto](docs/Foto-web3.png)
+## Struktur & Berkas Penting
 
-![Foto](docs/Foto-web4.png)
+- Entry: [src/main.js](src/main.js)
+- Root component: [src/App.svelte](src/App.svelte)
+- Styling global: [src/app.css](src/app.css)
+- Data CSV: [public/data/dataSantri.csv](public/data/dataSantri.csv)
 
-![Foto](docs/Foto-web5.png)
+Komponen dan util utama:
 
-Web ini sudah responsif sehingga tampilannya sudah bagus jika dibuka di smartphone maupun di dekstop.
+- Filter & data:
+  - Store data: [`dataSantri`](src/lib/store/dataSantri.ts) (auto-load CSV)
+  - Parser CSV: [`parseCSV`](src/lib/utils/parseCSV.ts) & loader [`loadCSV`](src/lib/utils/parseCSV.ts)
+  - Logic filter: [`filterPondok`, `filterKendaraan`, `filterSearch`, `filteredSantri`](src/lib/utils/filterData.ts)
+  - Dropdown global: [`activeDropdown`](src/lib/store/dropDown.ts) & [`setupGlobalDropdownCloser`](src/lib/utils/setupGlobalDropdownCloser.ts)
+- UI behavior:
+  - Scroll handler: [`handleScroll`](src/lib/utils/scrollHandler.ts)
+  - Scroll-to-section: [`scrollToSection`](src/lib/utils/scrollTo.ts)
+  - Toggle menu (mobile): [`toggleMenu`](src/lib/utils/toggleMenu.ts)
+  - Dark mode store: [`isDark`](src/lib/store/darkMode.ts)
+- Komponen penting:
+  - Navbar: [src/lib/component/Navbar.svelte](src/lib/component/Navbar.svelte) (MobileMenu, DekstopMenu)
+  - Filter: [src/lib/component/FilterBar.svelte](src/lib/component/FilterBar.svelte)
+  - Tabel Data: [src/lib/component/TabelDataSantri.svelte](src/lib/component/TabelDataSantri.svelte)
+  - Tabel Jadwal: [src/lib/component/TabelJadwal.svelte](src/lib/component/TabelJadwal.svelte)
+  - Gallery: [src/lib/component/photoGalery.svelte](src/lib/component/photoGalery.svelte)
 
-![Foto](docs/Foto-web6.png)
+## Catatan Pengembangan
+
+- CSV delimiter default: `;`. Parsing di [`parseCSV`](src/lib/utils/parseCSV.ts).
+- Dark mode meng-update class `dark` pada `document.documentElement` dan menyimpan pilihan di `localStorage` via [`isDark`](src/lib/store/darkMode.ts).
+- Pastikan file statis (gambar, CSV) ada di folder `public/` agar `fetch('/data/dataSantri.csv')` berjalan baik.
+- Gunakan `npm run format` untuk menerapkan Prettier.
+
+## Cara Berkontribusi
+
+- Fork / branch baru, lakukan perubahan, jalankan `npm run format`, lalu ajukan PR.

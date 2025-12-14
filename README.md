@@ -20,6 +20,16 @@ Selamat Datang di Dokumentasi Website Pusat Informasi Satgas IKPM Surabaya. Web 
 - FontAwesome, Lucide
 - TypeScript, CSS, HTML
 
+## Tampilan Website
+
+Tampilan website ketika di mode dekstop.
+
+![Foto](public/f1.webp)
+
+Tampilan website ketika di mode mobile
+
+![Foto](public/f2.webp)
+
 ## Menjalankan & Build
 
 1. Install dependencies:

@@ -80,7 +80,3 @@ Komponen dan util utama:
 - Dark mode meng-update class `dark` pada `document.documentElement` dan menyimpan pilihan di `localStorage` via [`isDark`](src/lib/store/darkMode.ts).
 - Pastikan file statis (gambar, CSV) ada di folder `public/` agar `fetch('/data/dataSantri.csv')` berjalan baik.
 - Gunakan `npm run format` untuk menerapkan Prettier.
-
-## Cara Berkontribusi
-
-- Fork / branch baru, lakukan perubahan, jalankan `npm run format`, lalu ajukan PR.

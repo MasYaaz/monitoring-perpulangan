@@ -20,9 +20,7 @@
 					{j.subtitle}
 				</h4>
 			</div>
-			<table
-				class="dark:shadow-secondary w-full overflow-hidden rounded-xl text-left text-sm shadow-md/30 transition-all duration-300 ease-in"
-			>
+			<table class="w-full overflow-hidden rounded-xl text-left text-sm shadow-md/30">
 				<thead
 					class=" bg-primary dark:bg-secondary text-secondary dark:text-primary text-[10px] font-normal uppercase transition-all duration-300 ease-in lg:text-base"
 				>
@@ -34,7 +32,7 @@
 					</tr>
 				</thead>
 				<tbody
-					class="text-primary bg-gray-100 text-xs font-semibold transition-all duration-300 ease-in lg:text-base"
+					class="text-primary dark:text-secondary bg-secondary/20 text-xs font-semibold backdrop-blur-[2px] transition-all duration-300 ease-in lg:text-base"
 				>
 					{#each j.data as row, i}
 						<tr class="text-center">

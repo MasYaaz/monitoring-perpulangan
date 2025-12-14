@@ -8,7 +8,7 @@
 	<div class=" dark:shadow-secondary w-full overflow-hidden rounded-2xl shadow-md/30">
 		<table class="w-full table-fixed">
 			<thead
-				class=" bg-primary dark:bg-secondary text-secondary dark:text-primary text-[8px] font-bold uppercase md:text-sm lg:text-base"
+				class=" bg-primary dark:bg-secondary text-secondary dark:text-primary text-[8px] font-bold uppercase transition-all duration-300 ease-in md:text-sm lg:text-base"
 			>
 				<tr class="h-8 text-center md:h-10 lg:h-12">
 					<th class="w-[10%] max-w-[40px] py-1">No.</th>
@@ -20,10 +20,12 @@
 			</thead>
 		</table>
 		<div
-			class="no-scrollbar max-h-[380px] w-full overflow-y-auto md:max-h-[420px] lg:max-h-[480px] xl:max-h-[580px]"
+			class="no-scrollbar bg-secondary/20 max-h-[380px] w-full overflow-y-auto backdrop-blur-[2px] md:max-h-[420px] lg:max-h-[480px] xl:max-h-[580px]"
 		>
 			<table class="w-full table-fixed text-sm">
-				<tbody class="text-primary bg-gray-100 text-xs font-semibold lg:text-base">
+				<tbody
+					class="text-primary dark:text-secondary text-xs font-semibold transition-all duration-300 ease-in lg:text-base"
+				>
 					{#if $filteredSantri.length === 0}
 						<tr class="text-center text-sm">
 							<td class="w-[10%] max-w-[40px] py-1"> - </td>

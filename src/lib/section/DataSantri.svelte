@@ -16,18 +16,20 @@
 	<!-- Judul section -->
 	<div class="z-10 flex h-full w-full flex-col items-center justify-between gap-5">
 		<div
-			class="dark:bg-secondary dark:text-primary bg-primary text-secondary dark:shadow-secondary rounded-3xl p-5 shadow-md/50"
+			class="dark:bg-secondary dark:text-primary bg-primary text-secondary dark:shadow-secondary rounded-3xl p-5 shadow-md/50 transition-all duration-300 ease-in"
 		>
 			<User class="h-20 w-20 lg:h-25 lg:w-25" />
 		</div>
 
 		<div>
 			<h2
-				class="font-heading text-center text-3xl font-black uppercase lg:text-5xl dark:text-white"
+				class="font-heading text-center text-3xl font-black uppercase transition-all duration-300 ease-in lg:text-5xl dark:text-white"
 			>
 				Data Santri
 			</h2>
-			<h2 class="font-heading text-center text-lg font-bold uppercase lg:text-2xl dark:text-white">
+			<h2
+				class="font-heading text-center text-lg font-bold uppercase transition-all duration-300 ease-in lg:text-2xl dark:text-white"
+			>
 				Tiap - tiap Pondok
 			</h2>
 		</div>
